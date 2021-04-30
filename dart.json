@@ -2967,7 +2967,7 @@
                               "e == selKLineType",
                                   "? Colors.white",
                                   ": AppColors.text_main),",
-                          "side: MaterialStateProperty.all(",
+                          "//side: MaterialStateProperty.all(",
                               "BorderSide(color: Colors.blue, width: 4)),",
 						  "shape: MaterialStateProperty.all(StadiumBorder()),",
                           "shape: MaterialStateProperty.all(",
