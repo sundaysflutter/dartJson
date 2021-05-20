@@ -1131,6 +1131,19 @@
 		 
 		    },
 		 
+		"mimport shake_animation_widget": {
+		 
+			        "prefix": "mimport shake_animation_widget",
+			 
+			        "body": [
+			 
+			            "import 'package:shake_animation_widget/shake_animation_widget.dart';",
+			 
+			        ],
+			 
+			        "description": "import shake_animation_widget"
+			 
+			    },
 		    "mimport gestures": {
 		 
 		        "prefix": "mimport gestures",
@@ -1141,7 +1154,7 @@
 		 
 		        ],
 		 
-		        "description": "import gestures.dart"
+		        "description": "import gestures"
 		 
 		    },
 
