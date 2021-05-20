@@ -75,7 +75,7 @@
 	    },
 		"import Provider": {
 	 
-	        "prefix": "myimProvider",
+	        "prefix": "mimProvider",
 	 
 	        "body": [
 	 
@@ -85,9 +85,35 @@
 	        "description": "import Provider"
 	 
 	    },
+	"import flutter_color": {
+	 
+		        "prefix": "mimflutter_color",
+		 
+		        "body": [
+					"import 'package:flutteridcm/style.dart';",
+		            "import 'package:flutter_color/flutter_color.dart';",
+		        ],
+		 
+		        "description": "import flutter_color"
+		 
+		    },
+	
+	"import Fluro": {
+	 
+		        "prefix": "mimFluro",
+		 
+		        "body": [
+		 
+			    "import 'package:flutteridcm/routes/application.dart';",
+				"import 'package:fluro/fluro.dart';",
+		        ],
+		 
+		        "description": "mport Fluro"
+		 
+		    },
 		"import material": {
 	 
-	        "prefix": "myimmaterial",
+	        "prefix": "mimmaterial",
 	 
 	        "body": [
 	 
@@ -99,7 +125,7 @@
 	    },
 		"import flustars": {
 	 
-	        "prefix": "myimflustars",
+	        "prefix": "mimflustars",
 	 
 	        "body": [
 	 
@@ -112,7 +138,7 @@
 	   },
 		"import gestures": {
 	 
-		        "prefix": "myimgestures",
+		        "prefix": "mimgestures",
 		 
 		        "body": [
 		 
@@ -126,7 +152,7 @@
 		 
 		    "import fluttertoast": {
 		 
-		        "prefix": "myimfluttertoast",
+		        "prefix": "mimfluttertoast",
 		 
 		        "body": [
 		 
@@ -137,12 +163,28 @@
 		        "description": "import fluttertoast"
 		 
 		    },
+
+		"myshowToast": {
 		 
-		    
-		 
+			        "prefix": "myshowToast",
+			 
+			        "body": [
+			 
+				"showToast(",
+					"text",
+					"duration: Duration(seconds: 2),",
+					"position: ToastPosition.top,",
+					"backgroundColor: Colors.black.withOpacity(0.8),",
+					"radius: 3.0,",
+					"textStyle: TextStyle(fontSize: 30.0),",
+				");",
+			     ],
+			 
+			        "description": "myshowToast"
+			 },
 		    "importcommon_util": {
 		 
-		        "prefix": "myimcommon_util",
+		        "prefix": "mimcommon_util",
 		 
 		        "body": [
 		 
@@ -156,7 +198,7 @@
 		 
 		    "importscreenutil": {
 		 
-		        "prefix": "myimscreenutil",
+		        "prefix": "mimscreenutil",
 		 
 		        "body": [
 		 
@@ -170,7 +212,7 @@
 		 
 		    "importeasylocalization": {
 		 
-		        "prefix": "myimeasylocalization",
+		        "prefix": "mimeasylocalization",
 		 
 		        "body": [
 		 
@@ -181,9 +223,9 @@
 		        "description": "import easy_localization"
 		 
 		    },
-		    "myImage.asset": {
+		    "mimage.asset": {
 		 
-		        "prefix": "myImage.asset",
+		        "prefix": "mimage.asset",
 		 
 		        "body": [
 		 
@@ -194,9 +236,9 @@
 		        "description": "Image.asset"
 		 
 		    },
-		    "myImage.asset_Util": {
+		    "mimage.asset_Util": {
 		 
-		        "prefix": "myImage.asset_Util",
+		        "prefix": "mimage.asset_Util",
 		 
 		        "body": [
 		 
@@ -207,9 +249,9 @@
 		        "description": "Image.asset_Util"
 		 
 		    },
-		    "myImage.network": {
+		    "mimage.network": {
 		 
-		        "prefix": "myImage.network",
+		        "prefix": "mimage.network",
 		 
 		        "body": [
 		 
@@ -217,12 +259,12 @@
 		 
 		        ],
 		 
-		        "description": "myImage.network"
+		        "description": "mimage.network"
 		 
 		    },
-		    "myImage.network_Util": {
+		    "mimage.network_Util": {
 		 
-		        "prefix": "myImage.network_Util",
+		        "prefix": "mimage.network_Util",
 		 
 		        "body": [
 		 
@@ -230,7 +272,7 @@
 		 
 		        ],
 		 
-		        "description": "myImage.network_Util"
+		        "description": "mimage.network_Util"
 		 
 		    },
 		 
@@ -551,8 +593,6 @@
 		 
 		            "Scaffold(",
 		 
-		            "resizeToAvoidBottomPadding: false,",
-		 
 		            "resizeToAvoidBottomInset: false,",
 		 
 		            "appBar: AppBar(",
@@ -573,13 +613,13 @@
 		 
 		            "actions: <Widget>[",
 		 
-		            "new IconButton( // action button",
+		            "//new IconButton( // action button",
 		 
-		            "icon: new Icon(Icons.fast_forward),",
+		            "//icon: new Icon(Icons.fast_forward),",
 		 
-		            "onPressed: () { },",
+		            "//onPressed: () { },",
 		 
-		            "),",
+		            "//),",
 		 
 		            "],",
 		 
@@ -987,7 +1027,7 @@
 		        "description": "ContainerSPUtil"
 		 
 		    },
-		 
+		 	
 		    "myText": {
 		 
 		        "prefix": "myText",
@@ -1002,21 +1042,36 @@
 		 
 		    },
 		 
-		    "myTextNav": {
+		    "myTextNavStyle": {
 		 
-		        "prefix": "myTextNav",
+		        "prefix": "myTextNavStyle",
 		 
 		        "body": [
 		 
-		            "Text(tr(''),style:Theme.of(context).textTheme.display1),",
+				"Text(",
+					"tr('M_findPIN'),",
+					"style: TextStyles.textNavTitle,",
+		  			")",
 		 
 		        ],
 		 
-		        "description": "myTextNav"
+		        "description": "myTextNavStyle"
 		 
 		    },
 		 
-		    
+		    "myTextNav": {
+		 
+			        "prefix": "myTextNav",
+			 
+			        "body": [
+			 
+			            "Text(tr(''),style:Theme.of(context).textTheme.display1),",
+			 
+			        ],
+			 
+			        "description": "myTextNav"
+			 
+			    },
 		 
 		    "myTextSPUtil": {
 		 
@@ -1076,9 +1131,9 @@
 		 
 		    },
 		 
-		    "import package:flutter/gestures.dart": {
+		    "mimportgestures": {
 		 
-		        "prefix": "myimportgestures",
+		        "prefix": "mimportgestures",
 		 
 		        "body": [
 		 
@@ -1086,9 +1141,25 @@
 		 
 		        ],
 		 
-		        "description": "mport package:flutter/gestures.dart"
+		        "description": "import gestures.dart"
 		 
 		    },
+
+		"mimport flutter_svg": {
+		 
+			        "prefix": "mimportgestures",
+			 
+			        "body": [
+			 
+			            "import 'package:flutter_svg/flutter_svg.dart';",
+			 
+			        ],
+			 
+			        "description": "import flutter_svg"
+			 
+			    },
+
+		
 		 
 		    "myRichText": {
 		 
@@ -1616,11 +1687,11 @@
 		 
 		                      "gravity: ToastGravity.CENTER,",
 		 
-		                      "timeInSecForIos: 1,",
+		                      "timeInSecForIosWeb: 1,",
 		 
-		                      "backgroundColor: Colors.white,",
+		                      "backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black : Colors.white,",
 		 
-		                      "textColor: Colors.black",
+		                      "textColor: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black",
 		 
 		                    ");",
 		 
@@ -3017,6 +3088,26 @@
     ],
     "description": "myButtonBar"
    },
+
+"mRaisedButton": {
+	    "prefix": "mRaisedButton",
+	    "body": [
+		     "RaisedButton(",
+				"onPressed: () {},",
+				"disabledColor: AppColors.bg_btn_sel.darker(50),",
+				"disabledTextColor: Colors.white70,",
+				"child: Text(tr('3.2.3_Hy_UnBind'),",
+				"style: TextStyle(fontSize: 16)),",
+				"splashColor: Colors.green,",
+				"highlightColor: Colors.black,",
+				"shape: BeveledRectangleBorder(",
+				"borderRadius: BorderRadius.circular(2),",
+				"),",
+			"))",
+	    ],
+	    "description": "mRaisedButton"
+	   },
+
 
 	"myButtonStyle": {
 		    "prefix": "myButtonStyle",
