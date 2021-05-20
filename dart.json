@@ -1131,9 +1131,9 @@
 		 
 		    },
 		 
-		    "mimportgestures": {
+		    "mimport gestures": {
 		 
-		        "prefix": "mimportgestures",
+		        "prefix": "mimport gestures",
 		 
 		        "body": [
 		 
@@ -1147,7 +1147,7 @@
 
 		"mimport flutter_svg": {
 		 
-			        "prefix": "mimportgestures",
+			        "prefix": "mimport flutter_svg",
 			 
 			        "body": [
 			 
