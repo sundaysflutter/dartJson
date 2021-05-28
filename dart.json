@@ -75,7 +75,7 @@
 	    },
 		"import Provider": {
 	 
-	        "prefix": "mimProvider",
+	        "prefix": "mimport Provider",
 	 
 	        "body": [
 	 
@@ -87,7 +87,7 @@
 	    },
 	"import flutter_color": {
 	 
-		        "prefix": "mimflutter_color",
+		        "prefix": "mimport flutter_color",
 		 
 		        "body": [
 					"import 'package:flutteridcm/style.dart';",
@@ -100,7 +100,7 @@
 	
 	"import Fluro": {
 	 
-		        "prefix": "mimFluro",
+		        "prefix": "mimport Fluro",
 		 
 		        "body": [
 		 
@@ -108,24 +108,24 @@
 				"import 'package:fluro/fluro.dart';",
 		        ],
 		 
-		        "description": "mport Fluro"
+		        "description": "import Fluro"
 		 
 		    },
 		"import material": {
 	 
-	        "prefix": "mimmaterial",
+	        "prefix": "mimport material",
 	 
 	        "body": [
 	 
 	            "import 'package:flutter/material.dart';",
 	        ],
 	 
-	        "description": "import material"
+	        "description": "mimport material"
 	 
 	    },
 		"import flustars": {
 	 
-	        "prefix": "mimflustars",
+	        "prefix": "mimport flustars",
 	 
 	        "body": [
 	 
@@ -138,7 +138,7 @@
 	   },
 		"import gestures": {
 	 
-		        "prefix": "mimgestures",
+		        "prefix": "mimport gestures",
 		 
 		        "body": [
 		 
@@ -152,7 +152,7 @@
 		 
 		    "import fluttertoast": {
 		 
-		        "prefix": "mimfluttertoast",
+		        "prefix": "mimport fluttertoast",
 		 
 		        "body": [
 		 
@@ -176,15 +176,15 @@
 					"position: ToastPosition.top,",
 					"backgroundColor: Colors.black.withOpacity(0.8),",
 					"radius: 3.0,",
-					"textStyle: TextStyle(fontSize: 30.0),",
+					"textStyle: TextStyle(fontSize: 30.0,decoration: TextDecoration.none),",
 				");",
 			     ],
 			 
 			        "description": "myshowToast"
 			 },
-		    "importcommon_util": {
+		    "import common_util": {
 		 
-		        "prefix": "mimcommon_util",
+		        "prefix": "mimport common_util",
 		 
 		        "body": [
 		 
@@ -192,13 +192,13 @@
 		 
 		        ],
 		 
-		        "description": "importcommon_util"
+		        "description": "import common_util"
 		 
 		    },
 		 
-		    "importscreenutil": {
+		    "import screenutil": {
 		 
-		        "prefix": "mimscreenutil",
+		        "prefix": "mimport screenutil",
 		 
 		        "body": [
 		 
@@ -206,13 +206,13 @@
 		 
 		        ],
 		 
-		        "description": "screenutil"
+		        "description": "import screenutil"
 		 
 		    },
 		 
-		    "importeasylocalization": {
+		    "import easylocalization": {
 		 
-		        "prefix": "mimeasylocalization",
+		        "prefix": "mimport easylocalization",
 		 
 		        "body": [
 		 
@@ -519,9 +519,9 @@
 		            "child: Text('REGISTER',",
 		 
 		            "style: TextStyle(",
-		 
+					
 		            "fontSize: 30,",
-		 
+					"decoration: TextDecoration.none",
 		            "color: Colors.white)",
 		 
 		            "),",
@@ -570,7 +570,7 @@
 		            "style: TextStyle(",
 		 
 		            "fontSize: ScreenUtil().setSp(30),",
-		 
+					"decoration: TextDecoration.none",
 		            "color: Colors.white)",
 		 
 		            "),",
@@ -745,20 +745,20 @@
 		    },
 		 
 		    
-		    "ShapeDecoration": {
-		        "prefix": "myShapeDecoration",
-		        "body": [
-		            "ShapeDecoration(",
-		                "color: Colors.white,//AppColors.popupBackground,",
-		                "shape: RoundedRectangleBorder(",
-		                    "borderRadius: BorderRadius.all(",
-		                        "Radius.circular(20),",
-		                    "),",
-		                "),",
-		            ")",
-		        ],
-		        "description": "myShapeDecoration"
-		    },
+		//     "ShapeDecoration": {
+		//         "prefix": "myShapeDecoration",
+		//         "body": [
+		//             "ShapeDecoration(",
+		//                 "color: Colors.white,//AppColors.popupBackground,",
+		//                 "shape: RoundedRectangleBorder(",
+		//                     "borderRadius: BorderRadius.all(",
+		//                         "Radius.circular(20),",
+		//                     "),",
+		//                 "),",
+		//             ")",
+		//         ],
+		//         "description": "myShapeDecoration"
+		//     },
 		    
 		    "BoxDecoration": {
 		 
@@ -1034,7 +1034,7 @@
 		 
 		        "body": [
 		 
-		            "Text('title',style:TextStyle(fontSize:14,color:Colors.black)),",
+		            "Text('title',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none,)),",
 		 
 		        ],
 		 
@@ -1051,6 +1051,7 @@
 				"Text(",
 					"tr('M_findPIN'),",
 					"style: TextStyles.textNavTitle,",
+					"decoration: TextDecoration.none",
 		  			")",
 		 
 		        ],
@@ -1079,7 +1080,7 @@
 		 
 		        "body": [
 		 
-		            "Text('title',style:TextStyle(fontSize:ScreenUtil().getSp(12),color:Util_Tool.themsubTitleGrayColor)),",
+		            "Text('title',style:TextStyle(fontSize:ScreenUtil().getSp(12),color:Util_Tool.themsubTitleGrayColor,decoration: TextDecoration.none,)),",
 		 
 		        ],
 		 
@@ -1095,7 +1096,7 @@
 		 
 		        "body": [
 		 
-		            "TextStyle(fontSize:10,color:Colors.black)",
+		            "TextStyle(fontSize:10,color:Colors.black,decoration: TextDecoration.none)",
 		 
 		        ],
 		 
@@ -1109,7 +1110,7 @@
 		 
 		        "body": [
 		 
-		            "TextStyle(fontSize:10,color:Color(0xFF))",
+		            "TextStyle(fontSize:10,color:Color(0xFF),decoration: TextDecoration.none,)",
 		 
 		        ],
 		 
@@ -1123,7 +1124,7 @@
 		 
 		        "body": [
 		 
-		            "TextStyle(fontSize:ScreenUtil().getSp(14),color:Color(0xFF))",
+		            "TextStyle(fontSize:ScreenUtil().getSp(14),color:Color(0xFF),decoration: TextDecoration.none)",
 		 
 		        ],
 		 
@@ -1180,7 +1181,7 @@
 			"context: context,",
 			"leftWidget: Text(",
 			"  pinTipStr,",
-			"  style: TextStyle(fontSize: 18),",
+			"  style: TextStyle(fontSize: 18,decoration: TextDecoration.none),",
 			"),",
 			"rightWidget: GestureDetector(",
 			"  child: SvgPicture.asset(",
@@ -1209,23 +1210,50 @@
 					 
 	},
 
-				
-
-		    "mimport gestures": {
-		 
-		        "prefix": "mimport gestures",
+	
+	"import i_textfield": {
+ 
+		        "prefix": "mimport i_textfield",
 		 
 		        "body": [
 		 
-		            "import 'package:flutter/gestures.dart';",
+		            "import 'package:flutteridcm/widgets/i_textfield.dart';",
 		 
 		        ],
 		 
-		        "description": "import gestures"
+		        "description": "import i_textfield"
+		 
+		    },
+		"import str_util": {
+ 
+			        "prefix": "mimport str_util",
+			 
+			        "body": [
+			 
+			            "import 'package:flutteridcm/utils/str_util.dart';",
+			 
+			        ],
+			 
+			        "description": "import str_util"
+			 
+			    },
+		
+	"import style": {
+ 
+		        "prefix": "mimport style",
+		 
+		        "body": [
+		 
+		            "import 'package:flutteridcm/style.dart';",
+		 
+		        ],
+		 
+		        "description": "import style"
 		 
 		    },
 
-		"mimport flutter_svg": {
+
+		"import flutter_svg": {
 		 
 			        "prefix": "mimport flutter_svg",
 			 
@@ -1256,7 +1284,7 @@
 		            "color:Colors.grey,",
 		 
 		            "fontSize:14,",
-		 
+					"decoration: TextDecoration.none",
 		            "),",
 		 
 		            "children: [",
@@ -1265,7 +1293,7 @@
 		 
 		            "text:'Shopsave FreeMenbership Agreement',",
 		 
-		            "style:TextStyle(fontSize:14,color:Colors.greenAccent),",
+		            "style:TextStyle(fontSize:14,color:Colors.greenAccent,decoration: TextDecoration.none),",
 		 
 		            "recognizer: TapGestureRecognizer()..onTap = () {},",
 		 
@@ -1278,7 +1306,7 @@
 		            "style: TextStyle(",
 		 
 		            "color: Colors.grey,",
-		 
+					"decoration: TextDecoration.none",
 		            "fontSize: 14)),",
 		 
 		            "TextSpan(",
@@ -1286,7 +1314,7 @@
 		            "text: 'Privacy Policy',",
 		 
 		            "style: TextStyle(",
-		 
+					"decoration: TextDecoration.none",
 		            "color: Colors.greenAccent,",
 		 
 		            "fontSize: 14),",
@@ -1345,7 +1373,7 @@
 		 
 		            "builder: (context){",
 		 
-		            "return Text('title',style:TextStyle(fontSize:10,color:Colors.black));",
+		            "return Text('title',style:TextStyle(fontSize:10, decoration: TextDecoration.none,color:Colors.black));",
 		 
 		            "},",
 		 
@@ -1378,7 +1406,7 @@
 		                "'title',",
 		 
 		                "style:TextStyle(fontSize:ScreenUtil().getSp(12),",
-		 
+						"decoration: TextDecoration.none",
 		                "color:Util_Tool.themsubTitleGrayColor)),",
 		 
 		                "subtitle: Text(",
@@ -1386,7 +1414,7 @@
 		                "'title',",
 		 
 		                "style:TextStyle(fontSize:ScreenUtil().getSp(12),",
-		 
+						"decoration: TextDecoration.none",
 		                "color:Util_Tool.themsubTitleGrayColor)),",
 		 
 		                "leading:Text(''),",
@@ -2165,9 +2193,9 @@
 		 
 		                  "ListTile(",
 		 
-		                    "title: Text('data.',style:TextStyle(fontSize:ScreenUtil().getSp(20),color: Util_Tool.themHeadTitleBlackColor)),",
+		                    "title: Text('data.',style:TextStyle(fontSize:ScreenUtil().getSp(20),color: Util_Tool.themHeadTitleBlackColor,decoration: TextDecoration.none)),",
 		 
-		                    "subtitle: Text('5 mar 2020',style:TextStyle(fontSize:14,color:Colors.black)),",
+		                    "subtitle: Text('5 mar 2020',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none)),",
 		 
 		                    "leading: InkWell(",
 		 
@@ -2221,7 +2249,7 @@
 		 
 		                        "),",
 		 
-		                        "child: Text(tr('+FOLLOW'),style: TextStyle(fontSize:ScreenUtil().getSp(12),color:Colors.white),),",
+		                        "child: Text(tr('+FOLLOW'),style: TextStyle(fontSize:ScreenUtil().getSp(12),color:Colors.white,decoration: TextDecoration.none),),",
 		 
 		                      "),",
 		 
@@ -2233,7 +2261,7 @@
 		 
 		                  "Image.network('http:\/\/blogimages.jspang.com/blogtouxiang1.jpg',width:double.infinity,height:ScreenUtil().getHeight(160)),",
 		 
-		                  "Text('Check out our sale items with discounts up to 50%.',maxLines: 2,style:TextStyle(fontSize:14,color:Util_Tool.themHeadTitleBlackColor)),",
+		                  "Text('Check out our sale items with discounts up to 50%.',maxLines: 2,style:TextStyle(fontSize:14,color:Util_Tool.themHeadTitleBlackColor,decoration: TextDecoration.none)),",
 		 
 		                  "Row(",
 		 
@@ -2261,7 +2289,7 @@
 		 
 		                          "InkWell(",
 		 
-		                            "child:Text('223',style:TextStyle(fontSize:14,color:Colors.black)),",
+		                            "child:Text('223',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none)),",
 		 
 		                            "onTap:(){}",
 		 
@@ -2285,7 +2313,7 @@
 		 
 		                          "Image.asset(\"images\/message_1.png\",fit: BoxFit.cover,width:24,height:24),",
 		 
-		                          "Text('223',style:TextStyle(fontSize:14,color:Colors.black))",
+		                          "Text('223',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none))",
 		 
 		                        "],",
 		 
@@ -2642,6 +2670,7 @@
 		            "style: TextStyle(",
 		            "color: Colors.white70,",
 		            "fontSize: 14,",
+					"decoration: TextDecoration.none",
 		            "fontWeight: FontWeight.w500,",
 		            "),",
 		        "),",
@@ -2660,12 +2689,12 @@
 		        "RichText(",
 		        "text: TextSpan(",
 		          "text: '登陆即同意',",
-		          "style: TextStyle(fontSize: 14, color: Colors.black),",
+		          "style: TextStyle(fontSize: 14, color: Colors.black,decoration: TextDecoration.none),",
 				  "recognizer: TapGestureRecognizer()..onTap = () {},",
 		          "children: [",
 		            "TextSpan(",
 		              "text: '\"服务条款\"',",
-		              "style: TextStyle(fontSize: 14, color: Colors.blue),",
+		              "style: TextStyle(fontSize: 14, color: Colors.blue,decoration: TextDecoration.none),",
 		              "recognizer: TapGestureRecognizer()",
 		                "..onTap = () {",
 		                  "print('点击了服务条款');",
@@ -2673,11 +2702,11 @@
 		            "),",
 		            "TextSpan(",
 		              "text: '和',",
-		              "style: TextStyle(fontSize: 14, color: Colors.black),",
+		              "style: TextStyle(fontSize: 14, color: Colors.black,decoration: TextDecoration.none,decoration: TextDecoration.none),",
 		            "),",
 		            "TextSpan(",
 		              "text: '\"隐私政策\"',",
-		              "style: TextStyle(fontSize: 14, color: Colors.blue),",
+		              "style: TextStyle(fontSize: 14, color: Colors.blue,decoration: TextDecoration.none),",
 		              "recognizer: TapGestureRecognizer()",
 		                "..onTap = () {",
 		                  "print('点击了隐私政策');",
@@ -2754,6 +2783,7 @@
 						"style: TextStyle(",
 						"fontSize: 15.0,",
 						"letterSpacing: 3.0,",
+						"decoration: TextDecoration.none",
 						"fontWeight: FontWeight.w400,",
 						"),",
 					"),",
@@ -3031,7 +3061,7 @@
 			"style: ButtonStyle(",
 			"//定义文本的样式 这里设置的颜色是不起作用的",
 			" textStyle: MaterialStateProperty.all(",
-			"TextStyle(fontSize: 18, )),//color: Colors.red",
+			"TextStyle(fontSize: 18, decoration: TextDecoration.none)),//color: Colors.red",
 			"//设置按钮上字体与图标的颜色",
 			"//foregroundColor: MaterialStateProperty.all(Colors.deepPurple),",
 			"//更优美的方式来设置",
@@ -3118,7 +3148,7 @@
                           "minimumSize: MaterialStateProperty.all(Size(0, 0)),",
                           "padding: MaterialStateProperty.all(",
                               "EdgeInsets.fromLTRB(10, 3, 10, 3)),",
-                          "textStyle: MaterialStateProperty.all(TextStyle(",
+                          "textStyle: MaterialStateProperty.all(TextStyle(","decoration: TextDecoration.none",
                               "// color: e == selKLineType",
                               "//     ? Colors.white",
                               "//     : Color(0xFF6194C7),",
@@ -3177,7 +3207,7 @@
 				"disabledColor: AppColors.bg_btn_sel.darker(50),",
 				"disabledTextColor: Colors.white70,",
 				"child: Text(tr('3.2.3_Hy_UnBind'),",
-				"style: TextStyle(fontSize: 16)),",
+				"style: TextStyle(fontSize: 16,decoration: TextDecoration.none)),",
 				"splashColor: Colors.green,",
 				"highlightColor: Colors.black,",
 				"shape: BeveledRectangleBorder(",
@@ -3198,6 +3228,7 @@
 				"padding: MaterialStateProperty.all(",
 					"EdgeInsets.fromLTRB(10, 3, 10, 3)),",
 				"textStyle: MaterialStateProperty.all(TextStyle(",
+				"decoration: TextDecoration.none",
 					"// color: e == selKLineType",
 					"//     ? Colors.white",
 					"//     : Color(0xFF6194C7),",
