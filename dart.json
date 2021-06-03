@@ -1051,7 +1051,6 @@
 				"Text(",
 					"tr('M_findPIN'),",
 					"style: TextStyles.textNavTitle,",
-					"decoration: TextDecoration.none",
 		  			")",
 		 
 		        ],
