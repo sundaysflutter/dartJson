@@ -1294,7 +1294,7 @@
 		 
 		            "style:TextStyle(fontSize:14,color:Colors.greenAccent,decoration: TextDecoration.none),",
 		 
-		            "recognizer: TapGestureRecognizer()..onTap = () {},",
+		            "//recognizer: TapGestureRecognizer()..onTap = () {},",
 		 
 		            "),",
 		 
@@ -1305,7 +1305,7 @@
 		            "style: TextStyle(",
 		 
 		            "color: Colors.grey,",
-					"decoration: TextDecoration.none",
+					"decoration: TextDecoration.none,",
 		            "fontSize: 14)),",
 		 
 		            "TextSpan(",
@@ -1318,7 +1318,7 @@
 		 
 		            "fontSize: 14),",
 		 
-		            "recognizer: TapGestureRecognizer()",
+		            "//recognizer: TapGestureRecognizer()..onTap = () {},",
 		 
 		            "..onTap = () {}",
 		 
