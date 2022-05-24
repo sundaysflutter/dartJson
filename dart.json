@@ -1,3282 +1,2360 @@
 {
-	// Place your snippets for dart here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// Place your snippets for dart here. Each snippet is defined under a snippet name and has a prefix, body and
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
 	// same ids are connected.
 	// Example:
 	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
+	// "prefix": "log",
+	// "body": [
+	// "console.log('$1');",
+	// "$2"
+	// ],
+	// "description": "Log output to console"
 	// }
-
-	"SpUtil.put": {
-		"prefix": "mySpUtil.put",
+	"mytextexpanded": {
+	"prefix": "mytextexpanded",
+	"body": [
+	"Expanded(",
+	"child: Text(''),",
+	"),",
+	],
+	"description": "mytextexpanded"
+	},
+	"mytextexpandedpadding": {
+	"prefix": "mytextexpandedpadding",
+	"body": [
+	"Expanded(",
+	"child: Padding(padding: ,child:Text('')),",
+	"),",
+	],
+	"description": "mytextexpandedpadding"
+	},
+	"mytextflexible": {
+	"prefix": "mytextflexible",
+	"body": [
+	"Flexible(",
+	"child: Text(''),",
+	"),",
+	],
+	"description": "mytextflexible"
+	},
+	 
+	"mytextflexiblepadding": {
+	"prefix": "mytextflexiblepadding",
+	"body": [
+	"Flexible(",
+	"child: Padding(padding: ,child:Text('')),",
+	"),",
+	],
+	"description": "mytextflexiblepadding"
+	},
+	"myTheme.of": {
+	"prefix": "myTheme.of",
+	"body": [
+	"Theme.of(context).",
+	],
+	"description": "myTheme.of"
+	},
+	"myIntlUtil": {
+	"prefix": "myIntlUtil",
+	"body": [
+	"IntlUtil.getString(context, Ids.)",
+	],
+	"description": "myIntlUtil"
+	},
+	"myfori": {
+	"prefix": "myfori",
+	"body": [
+	"for(int i = 0; i < count; i++){",
+	"",
+	"}",
+	],
+	"description": "my for i"
+	},
+	"AppBar": {
+	"prefix": "myAppBar",
+	"body": [
+	"AppBar(",
+	"leading: IconButton(",
+	"icon: Icon(",
+	"Icons.arrow_back_ios,",
+	"color: Colors.white,",
+	"),",
+	"onPressed: () {",
+	"Navigator.of(context).pop();",
+	"}),",
+	"backgroundColor: Colors.white,",
+	"title: const Text('Basic AppBar'),",
+	"actions: <Widget>[",
+	"new IconButton(",
+	"// action button",
+	"icon: new Icon(Icons.fast_forward),",
+	"onPressed: () {},",
+	"),",
+	"],",
+	"elevation: 0,",
+	"),",
+	],
+	"description": "AppBar"
+	},
+	"import material": {
+	"prefix": "myimmaterial",
+	"body": [
+	"import 'package:flutter/material.dart';",
+	],
+	"description": "import material"
+	},
+	"import cupertino": {
+	"prefix": "myimcupertino",
+	"body": [
+	"import 'package:flutter/cupertino.dart';",
+	],
+	"description": "import myimcupertino"
+	},
+	"import flustars": {
+	"prefix": "myimflustars",
+	"body": [
+	"package:flustars/flustars.dart';",
+	],
+	"description": "import flustars"
+	},
+	"import gestures": {
+	"prefix": "myimgestures",
+	"body": [
+	"import 'package:flutter/gestures.dart';",
+	],
+	"description": "import gestures"
+	},
+	"import fluttertoast": {
+	"prefix": "myimfluttertoast",
+	"body": [
+	"import 'package:fluttertoast/fluttertoast.dart';",
+	],
+	"description": "import fluttertoast"
+	},
+	"importcommon_util": {
+	"prefix": "myimcommon_util",
+	"body": [
+	"import 'package:shopsave/components/common_util/common_util.dart';",
+	],
+	"description": "importcommon_util"
+	},
+	"importscreenutil": {
+	"prefix": "myimscreenutil",
+	"body": [
+	"import 'package:flutter_screenutil/flutter_screenutil.dart';",
+	],
+	"description": "screenutil"
+	},
+	"importeasylocalization": {
+	"prefix": "myimeasylocalization",
+	"body": [
+	"import 'package:easy_localization/easy_localization.dart';",
+	],
+	"description": "import easy_localization"
+	},
+	"myImage.asset": {
+	"prefix": "myImage.asset",
+	"body": [
+	"Image.asset(\"images/2.0x/google.png\",fit: BoxFit.cover,width:40,height:40),",
+	],
+	"description": "Image.asset"
+	},
+	"myImage.asset_Util": {
+	"prefix": "myImage.asset_Util",
+	"body": [
+	"Image.asset(\"images/2.0x/google.png\",fit: BoxFit.cover,width:ScreenUtil().getWidth(24),height:ScreenUtil().getHeight(24)),",
+	],
+	"description": "Image.asset_Util"
+	},
+	"myImage.network": {
+	"prefix": "myImage.network",
+	"body": [
+	"Image.network(dataItem['productMainImageUrl'].toString(),width: MediaQuery.of(context).size.width,height: width,)",
+	],
+	"description": "myImage.network"
+	},
+	"myImage.network_Util": {
+	"prefix": "myImage.network_Util",
+	"body": [
+	"Image.network(dataItem['productMainImageUrl'].toString(),width: ScreenUtil().getWidth(90),height: ScreenUtil().getHeight(106),)",
+	],
+	"description": "myImage.network_Util"
+	},
+	"myEdget.onlyleft": {
+	"prefix": "myEdget.onlyleft",
+	"body": [
+	"EdgeInsets.only(left: ),",
+	],
+	"description": "EdgeInsets.onlyleft"
+	},
+	"myEdget.onlyright": {
+	"prefix": "myEdget.onlyright",
+	"body": [
+	"EdgeInsets.only(right: ),",
+	],
+	"description": "EdgeInsets.onlyright"
+	},
+	"myEdget.onlytop": {
+	"prefix": "myEdget.onlytop",
+	"body": [
+	"EdgeInsets.only(top: ),",
+	],
+	"description": "EdgeInsets.onlytop"
+	},
+	"myEdget.onlybottom": {
+	"prefix": "myEdget.onlybottom",
+	"body": [
+	"EEdgeInsets.only(bottom: ),",
+	],
+	"description": "EdgeInsets.onlybottom"
+	},
+	"myEdget.symhv1520": {
+	"prefix": "myEdget.symhv1520",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 15,vertical: 20),",
+	],
+	"description": "EdgeInsets.symhv1520"
+	},
+	"myEdget.symhv1510": {
+	"prefix": "myEdget.symhv1510",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 15,vertical: 10),",
+	],
+	"description": "EdgeInsets.symhv1510"
+	},
+	"myEdget.symhv1015": {
+	"prefix": "myEdget.symhv1015",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 10,vertical: 15),",
+	],
+	"description": "EdgeInsets.symhv1015"
+	},
+	"myEdget.symhv1020": {
+	"prefix": "myEdget.symhv1020",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 10,vertical: 20),",
+	],
+	"description": "EdgeInsets.symhv1020"
+	},
+	"myEdget.symh5": {
+	"prefix": "myEdget.symh5",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 5),",
+	],
+	"description": "EdgeInsets.symh5"
+	},
+	"myEdget.symh10": {
+	"prefix": "myEdget.symh10",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 10),",
+	],
+	"description": "EdgeInsets.symh10"
+	},
+	"myEdget.symh15": {
+	"prefix": "myEdget.symh15",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 15),",
+	],
+	"description": "EdgeInsets.symh15"
+	},
+	"myEdget.symh20": {
+	"prefix": "myEdget.symh20",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: 20),",
+	],
+	"description": "EdgeInsets.symh20"
+	},
+	"myEdget.symh_Util": {
+	"prefix": "myEdget.symh_Util",
+	"body": [
+	"EdgeInsets.symmetric(horizontal: ScreenUtil().getWidth(10)),",
+	],
+	"description": "EdgeInsets.symh_Util"
+	},
+	"myEdget.symv10": {
+	"prefix": "myEdget.symv10",
+	"body": [
+	"EdgeInsets.symmetric(vertical: 10),",
+	],
+	"description": "EdgeInsets.symv10"
+	},
+	"myEdget.symv5": {
+	"prefix": "myEdget.symv5",
+	"body": [
+	"EdgeInsets.symmetric(vertical: 5),",
+	],
+	"description": "EdgeInsets.symv5"
+	},
+	"myEdget.symv15": {
+	"prefix": "myEdget.symv15",
+	"body": [
+	"EdgeInsets.symmetric(vertical: 15),",
+	],
+	"description": "EdgeInsets.symv15"
+	},
+	"myEdget.symv20": {
+	"prefix": "myEdget.symv20",
+	"body": [
+	"EdgeInsets.symmetric(vertical: 20),",
+	],
+	"description": "EdgeInsets.symv20"
+	},
+	"myEdget.symv_Util": {
+	"prefix": "myEdget.symmetric.symv_Util",
+	"body": [
+	"EdgeInsets.symmetric(vertical: ScreenUtil().getHeight(10)),",
+	],
+	"description": "EdgeInsets.symv_Util"
+	},
+	"myEdget.fromLTRB1510": {
+	"prefix": "myEdget.fromLTRB1510",
+	"body": [
+	"EdgeInsets.fromLTRB(15, 10, 15, 10),",
+	],
+	"description": "LEdgeInsets.fromLTRB1510"
+	},
+	"myEdget.fromLTRB1015": {
+	"prefix": "myEdget.fromLTRB1015",
+	"body": [
+	"EdgeInsets.fromLTRB(10, 15, 10, 15),",
+	],
+	"description": "LEdgeInsets.fromLTRB1015"
+	},
+	"myEdget.fromLTRB1520": {
+	"prefix": "myEdget.fromLTRB1520",
+	"body": [
+	"EdgeInsets.fromLTRB(15, 20, 15, 20),",
+	],
+	"description": "LEdgeInsets.fromLTRB1520"
+	},
+	"myEdget.fromLTRB2015": {
+	"prefix": "myEdget.fromLTRB2015",
+	"body": [
+	"EdgeInsets.fromLTRB(20, 15, 20, 15),",
+	],
+	"description": "LEdgeInsets.fromLTRB2015"
+	},
+	"myEdget.all": {
+	"prefix": "myEdget.all",
+	"body": [
+	"EdgeInsets.all(15),",
+	],
+	"description": "LEdgeInsets.all"
+	},
+	"myEdget.fromLTRB_Util": {
+	"prefix": "myEdget.fromLTRB_Util",
+	"body": [
+	"EdgeInsets.fromLTRB(ScreenUtil().getWidth(15), ScreenUtil().getHeight(15), ScreenUtil().getWidth(15), ScreenUtil().getHeight(15)),",
+	],
+	"description": "LEdgeInsets.fromLTRB_Util"
+	},
+	"myScreenUitl.setsp": {
+	"prefix": "myScreenUtil.setsp",
+	"body": [
+	"ScreenUtil().setSp(16),",
+	],
+	"description": "ScreenUtil.setsp"
+	},
+	"myScreenUitl.setwidth": {
+	"prefix": "myScreenUtil.setWidth",
+	"body": [
+	"ScreenUtil().setWidth(16),",
+	],
+	"description": "ScreenUtil.setWidth"
+	},
+	"myScreenUitl.setheight": {
+	"prefix": "myScreenUtil.setHeight",
+	"body": [
+	"ScreenUtil().setHeight(16),",
+	],
+	"description": "ScreenUtil.setHeight"
+	},
+	"myScreenUitl.getsp": {
+	"prefix": "myScreenUtil.getsp",
+	"body": [
+	"ScreenUtil().getSp(16),",
+	],
+	"description": "ScreenUtil.setsp"
+	},
+	"myScreenUitl.getwidth": {
+	"prefix": "myScreenUtil.getWidth",
+	"body": [
+	"ScreenUtil().getWidth(16),",
+	],
+	"description": "ScreenUtil.getWidth"
+	},
+	"myScreenUitl.getheight": {
+	"prefix": "myScreenUtil.getHeight",
+	"body": [
+	"ScreenUtil().getHeight(16),",
+	],
+	"description": "ScreenUtil.getHeight"
+	},
+	"ifcallback": {
+	"prefix": "ifcallback",
+	"body": [
+	"if (widget.dismissCallback != null) {",
+	"widget.dismissCallback();",
+	"}",
+	],
+	"description": "if callback != null"
+	},
+	"ignore immutable": {
+	"prefix": "ignoreimmutable",
+	"body": [
+	"//ignore: must_be_immutable",
+	],
+	"description": "ignore immutable"
+	},
+	"myOutlineButton": {
+	"prefix": "myOutlineButton",
+	"body": [
+	"OutlineButton(",
+	"onPressed: () {",
+	"Navigator.push(",
+	"context,",
+	"MaterialPageRoute(",
+	"builder: (context) {",
+	"return Text('data');",
+	"},",
+	"),",
+	");",
+	"},",
+	"color: Colors.red,",
+	"child: Text('REGISTER',",
+	"style: TextStyle(",
+	"fontSize: 30,",
+	"color: Colors.white)",
+	"),",
+	"padding: EdgeInsets.symmetric(horizontal: 10),",
+	")",
+	],
+	"description": "OutlineButton"
+	},
+	"myOutlineButton_Util": {
+	"prefix": "myOutlineButton_Util",
+	"body": [
+	"OutlineButton(",
+	"onPressed: () {",
+	"Navigator.push(",
+	"context,",
+	"MaterialPageRoute(",
+	"builder: (context) {",
+	"return Text('data');",
+	"},",
+	"),",
+	");",
+	"},",
+	"color: Colors.red,",
+	"child: Text('REGISTER',",
+	"style: TextStyle(",
+	"fontSize: ScreenUtil().setSp(30),",
+	"color: Colors.white)",
+	"),",
+	"padding: EdgeInsets.symmetric(horizontal: 10),",
+	")",
+	],
+	"description": "OutlineButton_Util"
+	},
+	"scaffold": {
+	"prefix": "myscaffold",
+	"body": [
+	"Scaffold(",
+	"resizeToAvoidBottomPadding: false,",
+	"resizeToAvoidBottomInset: false,",
+	"appBar: AppBar(",
+	"leading: IconButton(",
+	"icon: Icon(Icons.arrow_back_ios,color: Colors.white,), ",
+	"onPressed: (){",
+	"}),",
+	"elevation: 0,",
+	"backgroundColor: Theme.of(context).accentColor,",
+	"title: Text('Basic AppBar'),",
+	"actions: <Widget>[",
+	"new IconButton( // action button",
+	"icon: new Icon(Icons.fast_forward),",
+	"onPressed: () { },",
+	"),",
+	"],",
+	"),",
+	"body: Container(",
+	"padding: EdgeInsets.all(10),",
+	"child: Text('data'),",
+	"),",
+	");",
+	],
+	"description": "ScaflodWidget"
+	},
+	"ClipRRect": {
+	"prefix": "myClipRRect",
+	"body": [
+	"ClipRRect(",
+	"borderRadius: BorderRadius.circular(30),",
+	"child: Container(",
+	"width: MediaQuery.of(context).size.width,",
+	"height: 88,",
+	"decoration: BoxDecoration(",
+	"borderRadius:BorderRadius.circular(20), ",
+	"color: Colors.red",
+	"boxShadow: [",
+	"BoxShadow(",
+	"color: Colors.black12,",
+	"offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
+	"blurRadius: 15.0, \/\/阴影模糊程度",
+	"spreadRadius: 1.0 \/\/阴影扩散程度",
+	")",
+	"]",
+	"),",
+	"child: Text('')",
+	"),",
+	"),",
+	],
+	"description": "ClipRRect"
+	},
+	"ClipRRect_Util": {
+	"prefix": "myClipRRect_Util",
+	"body": [
+	"ClipRRect(",
+	"borderRadius: BorderRadius.circular(30),",
+	"child: Container(",
+	"width: ScreenUtil().setWidth(750),",
+	"height: ScreenUtil().setHeight(88),",
+	"decoration: BoxDecoration(",
+	"borderRadius:BorderRadius.circular(20), ",
+	"color: Colors.red",
+	"boxShadow: [",
+	"BoxShadow(",
+	"color: Colors.black12,",
+	"offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
+	"blurRadius: 15.0, \/\/阴影模糊程度",
+	"spreadRadius: 1.0 \/\/阴影扩散程度",
+	")",
+	"]",
+	"),",
+	"child: Text('')",
+	"),",
+	"),",
+	],
+	"description": "ClipRRect_Util"
+	},
+	"ShapeDecoration": {
+	"prefix": "myShapeDecoration",
+	"body": [
+	"ShapeDecoration(",
+	"color: Colors.white,//AppColors.popupBackground,",
+	"shape: RoundedRectangleBorder(",
+	"borderRadius: BorderRadius.all(",
+	"Radius.circular(20),",
+	"),",
+	"),",
+	")",
+	],
+	"description": "myShapeDecoration"
+	},
+	"BoxDecoration": {
+	"prefix": "myBoxDecoration",
+	"body": [
+	"BoxDecoration(",
+	"borderRadius:BorderRadius.circular(20),",
+	"color: Colors.red,",
+	"border: Border.all(color: Colors.red),",
+	"boxShadow: [",
+	"BoxShadow(",
+	"color: Colors.black12,",
+	"offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
+	"blurRadius: 15.0, \/\/阴影模糊程度",
+	"spreadRadius: 1.0 \/\/阴影扩散程度",
+	")",
+	"]",
+	"),",
+	],
+	"description": "BoxDecoration",
+	},
+	"myshapeBeveledRectangleBorder": {
+	"prefix": "myshapeBeveledRectangleBorder",
+	"body": [
+	"BeveledRectangleBorder(",
+	"side: BorderSide(",
+	"color: Colors.white,",
+	"),",
+	"borderRadius: BorderRadius.all(Radius.circular(10))",
+	"),",
+	],
+	"description": "myshapeBeveledRectangleBorder"
+	},
+	"myshapeCircleBorder": {
+	"prefix": "myshapeCircleBorder",
+	"body": [
+	"CircleBorder(",
+	"side: BorderSide(",
+	"color: Colors.white,",
+	"),",
+	"),",
+	],
+	"description": "myshapeCircleBorder"
+	},
+	"myshapeRoundedRectangleBorder": {
+	"prefix": "myshapeRoundedRectangleBorder",
+	"body": [
+	"RoundedRectangleBorder(",
+	"borderRadius: BorderRadius.all(Radius.circular(10)),",
+	"),",
+	],
+	"description": "myshapeRoundedRectangleBorder"
+	},
+	"myshapeStadiumBorder": {
+	"prefix": "myshapeStadiumBorder",
+	"body": [
+	"StadiumBorder(),",
+	],
+	"description": "myshapeStadiumBorder"
+	},
+	"color0x": {
+	"prefix": "mycolor0x",
+	"body": [
+	"Color(0x)",
+	],
+	"description": "color0x"
+	},
+	"color0xff": {
+	"prefix": "mycolor0xff",
+	"body": [
+	"Color(0xff)",
+	],
+	"description": "color0xff"
+	},
+	"color0xOpacity": {
+	"prefix": "mycolor0xOpacity",
+	"body": [
+	"Color(0xff).withOpacity(0.1),",
+	],
+	"description": "color0xOpacity"
+	},
+	"myappbar": {
+	"prefix": "myappbar",
+	"body": [
+	"appBar: AppBar(",
+	"leading: IconButton(",
+	"icon: Icon(Icons.arrow_back_ios), ",
+	"onPressed: (){",
+	"}),",
+	"backgroundColor: Theme.of(context).accentColor,",
+	"title: const Text('Basic AppBar'),",
+	"actions: <Widget>[",
+	"new IconButton( // action button",
+	"icon: new Icon(Icons.fast_forward),",
+	"onPressed: () { },",
+	"),",
+	"],",
+	"),",
+	],
+	"description": "Appbar"
+	},
+	"mycolumn": {
+	"prefix": "mycolumn",
+	"body": [
+	"Column(",
+	"mainAxisAlignment: MainAxisAlignment.start,",
+	"crossAxisAlignment: CrossAxisAlignment.center,",
+	"children:<Widget>[]",
+	"),",
+	],
+	"description": "Column"
+	},
+	"mycolumnDirection": {
+		"prefix": "mycolumDirection",
 		"body": [
-			"SpUtil.put"
+		"Column(",
+		"mainAxisAlignment: MainAxisAlignment.spaceEvenly,",
+        "crossAxisAlignment: CrossAxisAlignment.baseline,",
+        "mainAxisSize: MainAxisSize.max,",
+        "textDirection: TextDirection.ltr,",
+        "verticalDirection: VerticalDirection.down,",
+        "textBaseline: TextBaseline.alphabetic,",
+		"children:<Widget>[]",
+		"),",
 		],
-		"description": "mySpUtil.put"
-	},
-	
-
-		"AppBar": {
- 
-	        "prefix": "myAppBar",
-	 
-	        "body": [
-	 
-	            "AppBar(",
-	 
-	            "leading: IconButton(",
-	 
-	            "icon: Icon(",
-	 
-	            "Icons.arrow_back_ios,",
-	 
-	            "color: Colors.white,",
-	 
-	            "),",
-	 
-	            "onPressed: () {",
-	 
-	            "Navigator.of(context).pop();",
-	 
-	            "}),",
-	 
-	            "backgroundColor: Colors.white,",
-	 
-	            "title: const Text('Basic AppBar'),",
-	 
-	            "actions: <Widget>[",
-	 
-	            "new IconButton(",
-	 
-	            "// action button",
-	 
-	            "icon: new Icon(Icons.fast_forward),",
-	 
-	            "onPressed: () {},",
-	 
-	            "),",
-	 
-	            "],",
-	 
-	            "elevation: 0,",
-	 
-	            "),",
-	 
-	        ],
-	 
-	        "description": "AppBar"
-	 
-	    },
-		"import Provider": {
-	 
-	        "prefix": "mimport Provider",
-	 
-	        "body": [
-	 
-	            "import 'package:provider/provider.dart';",
-	        ],
-	 
-	        "description": "import Provider"
-	 
-	    },
-	"import flutter_color": {
-	 
-		        "prefix": "mimport flutter_color",
-		 
-		        "body": [
-					"import 'package:flutteridcm/style.dart';",
-		            "import 'package:flutter_color/flutter_color.dart';",
-		        ],
-		 
-		        "description": "import flutter_color"
-		 
-		    },
-	
-	"import Fluro": {
-	 
-		        "prefix": "mimport Fluro",
-		 
-		        "body": [
-		 
-			    "import 'package:flutteridcm/routes/application.dart';",
-				"import 'package:fluro/fluro.dart';",
-		        ],
-		 
-		        "description": "import Fluro"
-		 
-		    },
-		"import material": {
-	 
-	        "prefix": "mimport material",
-	 
-	        "body": [
-	 
-	            "import 'package:flutter/material.dart';",
-	        ],
-	 
-	        "description": "mimport material"
-	 
-	    },
-		"import flustars": {
-	 
-	        "prefix": "mimport flustars",
-	 
-	        "body": [
-	 
-	            "import 'package:flustars/flustars.dart';",
-	 
-	        ],
-	 
-	        "description": "import flustars"
-	 
-	   },
-		"import gestures": {
-	 
-		        "prefix": "mimport gestures",
-		 
-		        "body": [
-		 
-		            "import 'package:flutter/gestures.dart';",
-		 
-		        ],
-		 
-		        "description": "import gestures"
-		 
-		    },
-		 
-		    "import fluttertoast": {
-		 
-		        "prefix": "mimport fluttertoast",
-		 
-		        "body": [
-		 
-		            "import 'package:fluttertoast/fluttertoast.dart';",
-		 
-		        ],
-		 
-		        "description": "import fluttertoast"
-		 
-		    },
-
-		"myshowToast": {
-		 
-			        "prefix": "myshowToast",
-			 
-			        "body": [
-			 
-				"showToast(",
-					"text",
-					"duration: Duration(seconds: 2),",
-					"position: ToastPosition.top,",
-					"backgroundColor: Colors.black.withOpacity(0.8),",
-					"radius: 3.0,",
-					"textStyle: TextStyle(fontSize: 30.0,decoration: TextDecoration.none),",
-				");",
-			     ],
-			 
-			        "description": "myshowToast"
-			 },
-		    "import common_util": {
-		 
-		        "prefix": "mimport common_util",
-		 
-		        "body": [
-		 
-		            "import 'package:shopsave/components/common_util/common_util.dart';",
-		 
-		        ],
-		 
-		        "description": "import common_util"
-		 
-		    },
-		 
-		    "import screenutil": {
-		 
-		        "prefix": "mimport screenutil",
-		 
-		        "body": [
-		 
-		            "import 'package:flutter_screenutil/flutter_screenutil.dart';",
-		 
-		        ],
-		 
-		        "description": "import screenutil"
-		 
-		    },
-		 
-		    "import easylocalization": {
-		 
-		        "prefix": "mimport easylocalization",
-		 
-		        "body": [
-		 
-		            "import 'package:easy_localization/easy_localization.dart';",
-		 
-		        ],
-		 
-		        "description": "import easy_localization"
-		 
-		    },
-		    "mimage.asset": {
-		 
-		        "prefix": "mimage.asset",
-		 
-		        "body": [
-		 
-		            "Image.asset(\"images/2.0x/google.png\",fit: BoxFit.cover,width:40,height:40),",
-		 
-		        ],
-		 
-		        "description": "Image.asset"
-		 
-		    },
-		    "mimage.asset_Util": {
-		 
-		        "prefix": "mimage.asset_Util",
-		 
-		        "body": [
-		 
-		            "Image.asset(\"images/2.0x/google.png\",fit: BoxFit.cover,width:ScreenUtil().getWidth(24),height:ScreenUtil().getHeight(24)),",
-		 
-		        ],
-		 
-		        "description": "Image.asset_Util"
-		 
-		    },
-		    "mimage.network": {
-		 
-		        "prefix": "mimage.network",
-		 
-		        "body": [
-		 
-		            "Image.network(dataItem['productMainImageUrl'].toString(),width: MediaQuery.of(context).size.width,height: width,)",
-		 
-		        ],
-		 
-		        "description": "mimage.network"
-		 
-		    },
-		    "mimage.network_Util": {
-		 
-		        "prefix": "mimage.network_Util",
-		 
-		        "body": [
-		 
-		            "Image.network(dataItem['productMainImageUrl'].toString(),width: ScreenUtil().getWidth(90),height: ScreenUtil().getHeight(106),)",
-		 
-		        ],
-		 
-		        "description": "mimage.network_Util"
-		 
-		    },
-		 
-		    "myEdgeInsets.symmetric.horizontal": {
-		 
-		        "prefix": "myEdgeInsets.symmetric.horizontal",
-		 
-		        "body": [
-		 
-		            "EdgeInsets.symmetric(horizontal: 10),",
-		 
-		        ],
-		 
-		        "description": "EdgeInsets.symmetric(horizontal"
-		 
-		    },
-			"myEdgeInsets.only": {
-		 
-			        "prefix": "myEdgeInsets.only",
-			 
-			        "body": [
-			 
-			            "EdgeInsets.only(: 10),",
-			 
-			        ],
-			 
-			        "description": "myEdgeInsets.only"
-			 
-			    },
-		    "myEdgeInsets.symmetric.horizontal_Util": {
-		 
-		        "prefix": "myEdgeInsets.symmetric_Util.horizontal_Util",
-		 
-		        "body": [
-		 
-		            "EdgeInsets.symmetric(horizontal: ScreenUtil().getWidth(10)),",
-		 
-		        ],
-		 
-		        "description": "EdgeInsets.symmetric(horizontal_Util"
-		 
-		    },
-		    "myEdgeInsets.symmetric.vertical": {
-		 
-		        "prefix": "myEdgeInsets.symmetric.vertical",
-		 
-		        "body": [
-		 
-		            "EdgeInsets.symmetric(vertical: 10),",
-		 
-		        ],
-		 
-		        "description": "EdgeInsets.symmetric(vertical"
-		 
-		    },
-		    "myEdgeInsets.symmetric.vertical_Util": {
-		 
-		        "prefix": "myEdgeInsets.symmetric.vertical_Util",
-		 
-		        "body": [
-		 
-		            "EdgeInsets.symmetric(vertical: ScreenUtil().getHeight(10)),",
-		 
-		        ],
-		 
-		        "description": "EdgeInsets.symmetric(vertical_Util"
-		 
-		    },
-		 
-		    "myEdgeInsets.fromLTRB": {
-		 
-		        "prefix": "myEdgeInsets.fromLTRB",
-		 
-		        "body": [
-		 
-		            "EdgeInsets.fromLTRB(15, 15, 15, 15),",
-		 
-		        ],
-		 
-		        "description": "LEdgeInsets.fromLTRB"
-		 
-		    },
-		 
-		    "myEdgeInsets.fromLTRB_Util": {
-		 
-		        "prefix": "myEdgeInsets.fromLTRB_Util",
-		 
-		        "body": [
-		 
-		            "EdgeInsets.fromLTRB(ScreenUtil().getWidth(15), ScreenUtil().getHeight(15), ScreenUtil().getWidth(15), ScreenUtil().getHeight(15)),",
-		 
-		        ],
-		 
-		        "description": "LEdgeInsets.fromLTRB_Util"
-		 
-		    },
-		 
-		    "myScreenUitl.setsp": {
-		 
-		        "prefix": "myScreenUtil.setsp",
-		 
-		        "body": [
-		 
-		            "ScreenUtil().setSp(16),",
-		 
-		        ],
-		 
-		        "description": "ScreenUtil.setsp"
-		 
-		    },
-		 
-		    "myScreenUitl.setwidth": {
-		 
-		        "prefix": "myScreenUtil.setWidth",
-		 
-		        "body": [
-		 
-		            "ScreenUtil().setWidth(16),",
-		 
-		        ],
-		 
-		        "description": "ScreenUtil.setWidth"
-		 
-		    },
-		 
-		    "myScreenUitl.setheight": {
-		 
-		        "prefix": "myScreenUtil.setHeight",
-		 
-		        "body": [
-		 
-		            "ScreenUtil().setHeight(16),",
-		 
-		        ],
-		 
-		        "description": "ScreenUtil.setHeight"
-		 
-		    },
-		 
-		    "myScreenUitl.getsp": {
-		 
-		        "prefix": "myScreenUtil.getsp",
-		 
-		        "body": [
-		 
-		            "ScreenUtil().getSp(16),",
-		 
-		        ],
-		 
-		        "description": "ScreenUtil.setsp"
-		 
-		    },
-		 
-		    "myScreenUitl.getwidth": {
-		 
-		        "prefix": "myScreenUtil.getWidth",
-		 
-		        "body": [
-		 
-		            "ScreenUtil().getWidth(16),",
-		 
-		        ],
-		 
-		        "description": "ScreenUtil.getWidth"
-		 
-		    },
-		 
-		    "myScreenUitl.getheight": {
-		 
-		        "prefix": "myScreenUtil.getHeight",
-		 
-		        "body": [
-		 
-		            "ScreenUtil().getHeight(16),",
-		 
-		        ],
-		 
-		        "description": "ScreenUtil.getHeight"
-		 
-		    },
-		 
-		    "ifcallback": {
-		 
-		        "prefix": "ifcallback",
-		 
-		        "body": [
-		 
-		            "if (widget.dismissCallback != null) {",
-		 
-		            "widget.dismissCallback();",
-		 
-		            "}",
-		 
-		        ],
-		 
-		        "description": "if callback != null"
-		 
-		    },
-		 
-		    "ignore immutable": {
-		 
-		        "prefix": "ignoreimmutable",
-		 
-		        "body": [
-		 
-		            "//ignore: must_be_immutable",
-		 
-		        ],
-		 
-		        "description": "ignore immutable"
-		 
-		    },
-		 
-		    "OutlineButton": {
-		 
-		        "prefix": "myOutlineButton",
-		 
-		        "body": [
-		 
-		            "OutlineButton(",
-		 
-		            "onPressed: () {",
-		 
-		            "Navigator.push(",
-		 
-		            "context,",
-		 
-		            "MaterialPageRoute(",
-		 
-		            "builder: (context) {",
-		 
-		            "return Text('data');",
-		 
-		            "},",
-		 
-		            "),",
-		 
-		            ");",
-		 
-		            "},",
-		 
-		            "color: Colors.red,",
-		 
-		            "child: Text('REGISTER',",
-		 
-		            "style: TextStyle(",
-					
-		            "fontSize: 30,",
-					"decoration: TextDecoration.none",
-		            "color: Colors.white)",
-		 
-		            "),",
-		 
-		            "padding: EdgeInsets.symmetric(horizontal: 10),",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "OutlineButton"
-		 
-		    },
-		    "OutlineButton_Util": {
-		 
-		        "prefix": "myOutlineButton_Util",
-		 
-		        "body": [
-		 
-		            "OutlineButton(",
-		 
-		            "onPressed: () {",
-		 
-		            "Navigator.push(",
-		 
-		            "context,",
-		 
-		            "MaterialPageRoute(",
-		 
-		            "builder: (context) {",
-		 
-		            "return Text('data');",
-		 
-		            "},",
-		 
-		            "),",
-		 
-		            ");",
-		 
-		            "},",
-		 
-		            "color: Colors.red,",
-		 
-		            "child: Text('REGISTER',",
-		 
-		            "style: TextStyle(",
-		 
-		            "fontSize: ScreenUtil().setSp(30),",
-					"decoration: TextDecoration.none",
-		            "color: Colors.white)",
-		 
-		            "),",
-		 
-		            "padding: EdgeInsets.symmetric(horizontal: 10),",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "OutlineButton_Util"
-		 
-		    },
-		 
-		    "myscaffold": {
-		 
-		        "prefix": "myscaffold",
-		 
-		        "body": [
-		 
-		            "Scaffold(",
-		 
-		            "resizeToAvoidBottomInset: false,",
-		 
-		            "appBar: AppBar(",
-		 
-		            "leading: IconButton(",
-		 
-		            "icon: Icon(Icons.arrow_back_ios,color: Colors.white,), ",
-		 
-		            "onPressed: (){",
-		 
-		            "}),",
-		 
-		            "elevation: 0,",
-		 
-		            "backgroundColor: Theme.of(context).accentColor,",
-		 
-		            "title: Text('Basic AppBar'),",
-		 
-		            "actions: <Widget>[",
-		 
-		            "//new IconButton( // action button",
-		 
-		            "//icon: new Icon(Icons.fast_forward),",
-		 
-		            "//onPressed: () { },",
-		 
-		            "//),",
-		 
-		            "],",
-		 
-		            "),",
-		 
-		            "body: Container(",
-		 
-		            "padding: EdgeInsets.all(10),",
-		 
-		            "child: Text('data'),",
-		 
-		            "),",
-		 
-		            ");",
-		 
-		        ],
-		 
-		        "description": "ScaflodWidget"
-		 
-		    },
-		 
-		    "ClipRRect": {
-		 
-		        "prefix": "myClipRRect",
-		 
-		        "body": [
-		 
-		            "ClipRRect(",
-		 
-		            "borderRadius: BorderRadius.circular(30),",
-		 
-		            "child: Container(",
-		 
-		            "width: MediaQuery.of(context).size.width,",
-		 
-		            "height: 88,",
-		 
-		            "decoration: BoxDecoration(",
-		 
-		            "borderRadius:BorderRadius.circular(20), ",
-		 
-		            "color: Colors.red",
-		 
-		            "boxShadow: [",
-		 
-		                "BoxShadow(",
-		 
-		                    "color: Colors.black12,",
-		 
-		                    "offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
-		 
-		                    "blurRadius: 15.0, \/\/阴影模糊程度",
-		 
-		                    "spreadRadius: 1.0 \/\/阴影扩散程度",
-		 
-		                    ")",
-		 
-		              "]",
-		 
-		            "),",
-		 
-		            "child: Text('')",
-		 
-		            "),",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "ClipRRect"
-		 
-		    },
-		    "ClipRRect_Util": {
-		 
-		        "prefix": "myClipRRect_Util",
-		 
-		        "body": [
-		 
-		            "ClipRRect(",
-		 
-		            "borderRadius: BorderRadius.circular(30),",
-		 
-		            "child: Container(",
-		 
-		            "width: ScreenUtil().setWidth(750),",
-		 
-		            "height: ScreenUtil().setHeight(88),",
-		 
-		            "decoration: BoxDecoration(",
-		 
-		            "borderRadius:BorderRadius.circular(20), ",
-		 
-		            "color: Colors.red",
-		 
-		            "boxShadow: [",
-		 
-		                "BoxShadow(",
-		 
-		                    "color: Colors.black12,",
-		 
-		                    "offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
-		 
-		                    "blurRadius: 15.0, \/\/阴影模糊程度",
-		 
-		                    "spreadRadius: 1.0 \/\/阴影扩散程度",
-		 
-		                    ")",
-		 
-		              "]",
-		 
-		            "),",
-		 
-		            "child: Text('')",
-		 
-		            "),",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "ClipRRect_Util"
-		 
-		    },
-		 
-		    
-		//     "ShapeDecoration": {
-		//         "prefix": "myShapeDecoration",
-		//         "body": [
-		//             "ShapeDecoration(",
-		//                 "color: Colors.white,//AppColors.popupBackground,",
-		//                 "shape: RoundedRectangleBorder(",
-		//                     "borderRadius: BorderRadius.all(",
-		//                         "Radius.circular(20),",
-		//                     "),",
-		//                 "),",
-		//             ")",
-		//         ],
-		//         "description": "myShapeDecoration"
-		//     },
-		    
-		    "BoxDecoration": {
-		 
-		        "prefix": "myBoxDecoration",
-		 
-		        "body": [
-		 
-		            "BoxDecoration(",
-		 
-		            "borderRadius:BorderRadius.circular(20),",
-		 
-		            "color: Colors.red,",
-		 
-		            "border: Border.all(color: Colors.red),",
-		 
-		            "boxShadow: [",
-		 
-		                "BoxShadow(",
-		 
-		                    "color: Colors.black12,",
-		 
-		                    "offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
-		 
-		                    "blurRadius: 15.0, \/\/阴影模糊程度",
-		 
-		                    "spreadRadius: 1.0 \/\/阴影扩散程度",
-		 
-		                    ")",
-		 
-		              "]",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "BoxDecoration",
-		 
-		    },
-		 
-		"myshapeBeveledRectangleBorder": {
-		 
-	        "prefix": "myshapeBeveledRectangleBorder",
-	 
-	        "body": [
- 			"BeveledRectangleBorder(",
-				"side: BorderSide(",
-				"color: Colors.white,",
-				"),",
-				"borderRadius: BorderRadius.all(Radius.circular(10))",
-			"),",
-	 
-	        ],
-	 
-	        "description": "myshapeBeveledRectangleBorder"
-	 
-	    },
-
-		"myshapeCircleBorder": {
- 
-	        "prefix": "myshapeCircleBorder",
-	 
-	        "body": [
-			"CircleBorder(",
-				"side: BorderSide(",
-				"color: Colors.white,",
-				"),",
-			"),",
-	        ],
-	
-	        "description": "myshapeCircleBorder"
-	 
-	    },
-
-		"myshapeRoundedRectangleBorder": {
- 
-	        "prefix": "myshapeRoundedRectangleBorder",
-	 
-	        "body": [
-			"RoundedRectangleBorder(",
-				"borderRadius: BorderRadius.all(Radius.circular(10)),",
-			"),",
-	 
-	        ],
-	 
-	        "description": "myshapeRoundedRectangleBorder"
-	 
-	    },
-
-		"myshapeStadiumBorder": {
- 
-		        "prefix": "myshapeStadiumBorder",
-		 
-		        "body": [
-		 
-		            "StadiumBorder(),",
-		 
-		        ],
-		 
-		        "description": "myshapeStadiumBorder"
-		 
-		    },
-		    "color0x": {
-		 
-		        "prefix": "mycolor0x",
-		 
-		        "body": [
-		 
-		            "Color(0x)",
-		 
-		        ],
-		 
-		        "description": "color0x"
-		 
-		    },
-		 
-		    "color0xff": {
-		 
-		        "prefix": "mycolor0xff",
-		 
-		        "body": [
-		 
-		            "Color(0xff)",
-		 
-		        ],
-		 
-		        "description": "color0xff"
-		 
-		    },
-		 
-		    "color0xOpacity": {
-		 
-		        "prefix": "mycolor0xOpacity",
-		 
-		        "body": [
-		 
-		            "Color(0xff).withOpacity(0.1),",
-		 
-		        ],
-		 
-		        "description": "color0xOpacity"
-		 
-		    },
-		 
-		    "myappbar": {
-		 
-		        "prefix": "myappbar",
-		 
-		        "body": [
-		 
-		            "appBar: AppBar(",
-		 
-		            "leading: IconButton(",
-		 
-		            "icon: Icon(Icons.arrow_back_ios), ",
-		 
-		            "onPressed: (){",
-		 
-		            "}),",
-		 
-		            "backgroundColor: Theme.of(context).accentColor,",
-		 
-		            "title: const Text('Basic AppBar'),",
-		 
-		            "actions: <Widget>[",
-		 
-		            "new IconButton( // action button",
-		 
-		            "icon: new Icon(Icons.fast_forward),",
-		 
-		            "onPressed: () { },",
-		 
-		            "),",
-		 
-		            "],",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "Appbar"
-		 
-		    },
-		 
-		    "mycolumn": {
-		 
-		        "prefix": "mycolumn",
-		 
-		        "body": [
-		 
-		            "Column(",
-		 
-		            "mainAxisAlignment: MainAxisAlignment.start,",
-		 
-		            "crossAxisAlignment: CrossAxisAlignment.center,",
-		 
-		            "children:<Widget>[]",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "Column"
-		 
-		    },
-		 
-		    "myRow": {
-		 
-		        "prefix": "myRow",
-		 
-		        "body": [
-		 
-		            "Row(",
-		 
-		            "mainAxisAlignment: MainAxisAlignment.start,",
-		 
-		            "crossAxisAlignment: CrossAxisAlignment.center,",
-		 
-		            "children: <Widget>[",
-		 
-		            "],",
-		 
-		            ");",
-		 
-		        ],
-		 
-		        "description": "Row"
-		 
-		    },
-		 
-		    "myContainer": {
-		 
-		        "prefix": "myContainer",
-		 
-		        "body": [
-		 
-		            "Container(",
-		 
-		            "padding: EdgeInsets.fromLTRB(10, 20, 10, 30),",
-		 
-		            "child: Text('Register'),",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "Container"
-		 
-		    },
-		 
-		    "myContainerSPUtil": {
-		 
-		        "prefix": "myContainerSPUtil",
-		 
-		        "body": [
-		 
-		            "Container(",
-		 
-		            "padding: EdgeInsets.fromLTRB(ScreenUtil().getWidth(10), ScreenUtil().getHeight(20), ScreenUtil().getWidth(10), ScreenUtil().getHeight(30)),",
-		 
-		            "child: Text('Register'),",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "ContainerSPUtil"
-		 
-		    },
-		 	
-		    "myText": {
-		 
-		        "prefix": "myText",
-		 
-		        "body": [
-		 
-		            "Text('title',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none,)),",
-		 
-		        ],
-		 
-		        "description": "myText"
-		 
-		    },
-		 
-		    "myTextNavStyle": {
-		 
-		        "prefix": "myTextNavStyle",
-		 
-		        "body": [
-		 
-				"Text(",
-					"tr('M_findPIN'),",
-					"style: TextStyles.textNavTitle,",
-		  			")",
-		 
-		        ],
-		 
-		        "description": "myTextNavStyle"
-		 
-		    },
-		 
-		    "myTextNav": {
-		 
-			        "prefix": "myTextNav",
-			 
-			        "body": [
-			 
-			            "Text(tr(''),style:Theme.of(context).textTheme.display1),",
-			 
-			        ],
-			 
-			        "description": "myTextNav"
-			 
-			    },
-		 
-		    "myTextSPUtil": {
-		 
-		        "prefix": "myTextSPUtil",
-		 
-		        "body": [
-		 
-		            "Text('title',style:TextStyle(fontSize:ScreenUtil().getSp(12),color:Util_Tool.themsubTitleGrayColor,decoration: TextDecoration.none,)),",
-		 
-		        ],
-		 
-		        "description": "myTextSPUtil"
-		 
-		    },
-		 
-		    
-		 
-		    "myTextStyle": {
-		 
-		        "prefix": "myTextStyle",
-		 
-		        "body": [
-		 
-		            "TextStyle(fontSize:10,color:Colors.black,decoration: TextDecoration.none)",
-		 
-		        ],
-		 
-		        "description": "myTextStyle"
-		 
-		    },
-		 
-		    "myTextStMClr": {
-		 
-		        "prefix": "myTextStMClr",
-		 
-		        "body": [
-		 
-		            "TextStyle(fontSize:10,color:Color(0xFF),decoration: TextDecoration.none,)",
-		 
-		        ],
-		 
-		        "description": "myTextStMClr"
-		 
-		    },
-		 
-		    "myTextSCloSPUtil": {
-		 
-		        "prefix": "myTextSCloSPUtil",
-		 
-		        "body": [
-		 
-		            "TextStyle(fontSize:ScreenUtil().getSp(14),color:Color(0xFF),decoration: TextDecoration.none)",
-		 
-		        ],
-		 
-		        "description": "myTextSCloSPUtil"
-		 
-		    },
-		 
-		"mimport shake_animation_widget": {
-		 
-			        "prefix": "mimport shake_animation_widget",
-			 
-			        "body": [
-			 
-			            "import 'package:shake_animation_widget/shake_animation_widget.dart';",
-			 
-			        ],
-			 
-			        "description": "import shake_animation_widget"
-			 
-			    },
-
-	"mshake_animation_widget": {
-		 
-		"prefix": "mshake_animation_widget",
-				 
-			"body": [
-				 
-				"ShakeAnimationWidget(",
-                "//抖动控制器",
-                "shakeAnimationController: _shakeAnimationController,",
-                "//微旋转的抖动",
-                "shakeAnimationType: ShakeAnimationType.SkewShake,",
-                "//设置不开启抖动",
-                "isForward: false,",
-                "//默认为 0 无限执行",
-                "shakeCount: 0,",
-                "//抖动的幅度 取值范围为[0,1]",
-                "shakeRange: 0.2,",
-                "//执行抖动动画的子Widget",
-                "child: )",
-				 
-			],
-				 
-			"description": "mshake_animation_widget"
-				 
+		"description": "ColumnDirection"
 		},
-	"mpinCodeWdiget": {
-	 
-        "prefix": "mpinCodeWdiget",
- 
-        "body": [
-					 
-			"pinCodeWdiget(",
-			"context: context,",
-			"leftWidget: Text(",
-			"  pinTipStr,",
-			"  style: TextStyle(fontSize: 18,decoration: TextDecoration.none),",
+	"myRow": {
+	"prefix": "myRow",
+	"body": [
+	"Row(",
+	"mainAxisAlignment: MainAxisAlignment.start,",
+	"crossAxisAlignment: CrossAxisAlignment.center,",
+	"children: <Widget>[",
+	"],",
+	");",
+	],
+	"description": "Row"
+	},
+	"myContainer": {
+	"prefix": "myContainer",
+	"body": [
+	"Container(",
+	"padding: EdgeInsets.fromLTRB(15, 10, 15, 10),",
+	"child: Text('Register'),",
+	")",
+	],
+	"description": "Container"
+	},
+	"myContainerSPUtil": {
+	"prefix": "myContainerSPUtil",
+	"body": [
+	"Container(",
+	"padding: EdgeInsets.fromLTRB(ScreenUtil().getWidth(10), ScreenUtil().getHeight(20), ScreenUtil().getWidth(10), ScreenUtil().getHeight(30)),",
+	"child: Text('Register'),",
+	")",
+	],
+	"description": "ContainerSPUtil"
+	},
+	"myText": {
+	"prefix": "myText",
+	"body": [
+	"Text('title',style:TextStyle(fontSize:14,color:Colors.black)),",
+	],
+	"description": "myText"
+	},
+	"myTextNav": {
+	"prefix": "myTextNav",
+	"body": [
+	"Text(tr(''),style:Theme.of(context).textTheme.display1),",
+	],
+	"description": "myTextNav"
+	},
+	"myTextSPUtil": {
+	"prefix": "myTextSPUtil",
+	"body": [
+	"Text('title',style:TextStyle(fontSize:ScreenUtil().getSp(12),color:Util_Tool.themsubTitleGrayColor)),",
+	],
+	"description": "myTextSPUtil"
+	},
+	"myTextStyle": {
+	"prefix": "myTextStyle",
+	"body": [
+	"TextStyle(fontSize:10,color:Colors.black)",
+	],
+	"description": "myTextStyle"
+	},
+	"myTextStMClr": {
+	"prefix": "myTextStMClr",
+	"body": [
+	"TextStyle(fontSize:10,color:Color(0xFF))",
+	],
+	"description": "myTextStMClr"
+	},
+	"myTextSCloSPUtil": {
+	"prefix": "myTextSCloSPUtil",
+	"body": [
+	"TextStyle(fontSize:ScreenUtil().getSp(14),color:Color(0xFF))",
+	],
+	"description": "myTextSCloSPUtil"
+	},
+	"import package:flutter/gestures.dart": {
+	"prefix": "myimportgestures",
+	"body": [
+	"import 'package:flutter/gestures.dart';",
+	],
+	"description": "mport package:flutter/gestures.dart"
+	},
+	"myRichTextTapGesture": {
+	"prefix": "myRichTextTapGesture",
+	"body": [
+	"RichText(text: TextSpan(",
+	" text: 'text',",
+	"style: TextStyle(",
+	"color:Colors.grey,",
+	"fontSize:14,",
+	"),",
+	"children: [",
+	"TextSpan(",
+	"text:'Shopsave FreeMenbership Agreement',",
+	"style:TextStyle(fontSize:14,color:Colors.greenAccent),",
+	"recognizer: TapGestureRecognizer()..onTap = () {},",
+	"),",
+	"TextSpan(",
+	"text: 'and',",
+	"style: TextStyle(",
+	"color: Colors.grey,",
+	"fontSize: 14)),",
+	"TextSpan(",
+	"text: 'Privacy Policy',",
+	"style: TextStyle(",
+	"color: Colors.greenAccent,",
+	"fontSize: 14),",
+	"recognizer: TapGestureRecognizer()",
+	"..onTap = () {}",
+	"),",
+	"]",
+	")",
+	"),",
+	],
+	"description": "myRichTextTapGesture"
+	},
+	"myRichText": {
+	"prefix": "myRichText",
+	"body": [
+	"RichText(",
+	"text: TextSpan(",
+	"text: 'HKD',",
+	"style: TextStyle(",
+	"color: Colors.black,",
+	"fontSize: 14,",
+	"),",
+	"children: [",
+	"TextSpan(text: ' '),",
+	"WidgetSpan(",
+	"alignment: PlaceholderAlignment.baseline,",
+	"child: Text('data')),",
+	"WidgetSpan(child: Text('imge')),",
+	"TextSpan(text: ' '),",
+	"TextSpan(",
+	"text: '350.00',",
+	"style: TextStyle(",
+	"fontSize: 14, color: Colors.orangeAccent)",
+	" )",
+	"]",
+	" )",
+	"),",
+	],
+	"description": "myRichText"
+	},
+	"myListTileC": {
+	"prefix": "myListTileC",
+	"body": [
+	"ListTile(",
+	"title: Text(tr('SIGN IN')),",
+	"trailing: ClipOval(",
+	"child: Image.network('http://blogimages.jspang.com/blogtouxiang1.jpg' ,",
+	"width: 45,",
+	"height: 45,",
+	"fit: BoxFit.cover,)",
+	"),",
+	"leading: CircleAvatar(",
+	"backgroundImage: NetworkImage(imageUrl),",
+	"),",
+	"onTap: (){",
+	"Navigator.push(context, ",
+	" MaterialPageRoute(",
+	"builder: (context){",
+	"return Text('title',style:TextStyle(fontSize:10,color:Colors.black));",
+	"},",
+	"fullscreenDialog: true",
+	"),",
+	");",
+	"},",
+	"),",
+	],
+	"description": "myListTileC"
+	},
+	"myListTileSystem": {
+	"prefix": "myListTileSystem",
+	"body": [
+	"ListTile(",
+	"title:Text(",
+	"'title',",
+	"style:TextStyle(fontSize:ScreenUtil().getSp(12),",
+	"color:Util_Tool.themsubTitleGrayColor)),",
+	"subtitle: Text(",
+	"'title',",
+	"style:TextStyle(fontSize:ScreenUtil().getSp(12),",
+	"color:Util_Tool.themsubTitleGrayColor)),",
+	"leading:Text(''),",
+	"trailing:Text('')",
+	"onTap: (){},",
+	"),",
+	],
+	"description": "myListTileSystem"
+	},
+	"myNavPFD": {
+	"prefix": "myNavPFD",
+	"body": [
+	"Navigator.push(context, ",
+	"MaterialPageRoute(",
+	"builder: (context){",
+	"return Text('');",
+	"},",
+	"fullscreenDialog: true",
+	"),",
+	");",
+	],
+	"description": "myNavPFD"
+	},
+	"myNavNPName": {
+	"prefix": "myNavNPName",
+	"body": [
+	"Navigator.of(context).pushNamed('/');",
+	],
+	"description": "myNavNPName"
+	},
+	"myNavNPNaParam": {
+	"prefix": "myNavNPNaParam",
+	"body": [
+	"Navigator.pushNamed(",
+	"context,",
+	"'/weather',",
+	"arguments: <String, String>{",
+	"'key': 'value',",
+	"},",
+	],
+	"description": "myNavNPNaParam"
+	},
+	"myMediaQuery": {
+	"prefix": "myMediaQuery",
+	"body": [
+	"MediaQuery.of(context).size"
+	],
+	"description": "myMediaQuery"
+	},
+	"myNavNPRe": {
+	"prefix": "myNavNPRe",
+	"body": [
+	"Navigator.of(context).pushReplacementNamed('/screen4');",
+	],
+	"description": "myNavNPRe"
+	},
+	"myNavNPARUntil": {
+	"prefix": "myNavNPARUntil",
+	"body": [
+	"Navigator.of(context).pushNamedAndRemoveUntil(",
+	"'/screen4', ModalRoute.withName('/screen1'));",
+	],
+	"description": "myNavNPARUntil"
+	},
+	"myNavPRepalce": {
+	"prefix": "myNavPRepalce",
+	"body": [
+	"Navigator.pushReplacement(",
+	"context,",
+	"new MaterialPageRoute(builder: (context) => RegisterAccount()),",
+	");",
+	],
+	"description": "myNavPRepalce"
+	},
+	"myNavpop": {
+	"prefix": "myNavpop",
+	"body": [
+	"Navigator.of(context).pop();",
+	],
+	"description": "myNavpop"
+	},
+	"myNavpopNUntil": {
+	"prefix": "myNavpopNUntil",
+	"body": [
+	"Navigator.of(context).popUntil(ModalRoute.withName('/'));",
+	],
+	"description": "myNavpopNUntil"
+	},
+	"myNavpopNAndPName": {
+	"prefix": "myNavpopNAndPName",
+	"body": [
+	"Navigator.of(context).popAndPushNamed('/screen3');",
+	],
+	"description": "myNavpopNAndPName"
+	},
+	"myNavPPRemoveUtil": {
+	"prefix": "myNavPPRemoveUtil",
+	"body": [
+	"Navigator.pushAndRemoveUntil(",
+	"context, new MaterialPageRoute(builder: (context)=> Register_Login_Page()),",
+	"(route) => Route == null,",
+	");",
+	],
+	"description": "myNavPPRemoveUtil"
+	},
+	"myNavPTransition": {
+	"prefix": "myNavPTransition",
+	"body": [
+	"Navigator.of(context).push(new PageRouteBuilder(pageBuilder:",
+	"(BuildContext context, Animation<double> animation,",
+	"Animation<double> secondaryAnimation) {",
+	"return Text('11');",
+	"}, transitionsBuilder: (",
+	"BuildContext context,",
+	"Animation<double> animation,",
+	"Animation<double> secondaryAnimation,",
+	"Widget child,",
+	") {",
+	" // 添加一个平移动画",
+	"return BRouter.createTransition(animation, child);",
+	"}));",
+	"/// 创建一个平移变换",
+	"/// 跳转过去查看源代码，可以看到有各种各样定义好的变换",
+	"static SlideTransition createTransition(",
+	"Animation<double> animation, Widget child) {",
+	"return new SlideTransition(",
+	"position: new Tween<Offset>(",
+	"begin: const Offset(1.0, 0.0),",
+	"end: const Offset(0.0, 0.0),",
+	").animate(animation),",
+	"child: child, // child is the value returned by pageBuilder",
+	");",
+	"}",
+	],
+	"description": "myNavPTransition"
+	},
+	"myIcon": {
+	"prefix": "myIcon",
+	"body": [
+	"Icon(Icons.home,size: 20,color:Colors.red)",
+	],
+	"description": "Icon"
+	},
+	"mythenvalue": {
+	"prefix": ".mythenvalue",
+	"body": [
+	".then((value) {",
+	"print(\"页面成功了哦 $value\");",
+	"}).catchError((onError) {",
+	"print(\"页面请求失败 $onError\");",
+	"}).whenComplete(() {",
+	"print(\"页面whenComplete\");",
+	"});",
+	],
+	"description": "mythenvalue"
+	},
+	"Print to console": {
+	"prefix": "log",
+	"body": [
+	"FutureBuilder(",
+	"future: request(),",
+	"builder:(context,snapshot){",
+	"if (snapshot.hasData)",
+	"{",
+	"return Container(",
+	"padding: EdgeInsets.fromLTRB(10, 20, 10, 30),",
+	"child: Text('Register'),",
+	");",
+	"}else{",
+	"return Center(",
+	"child:Text('text')",
+	");",
+	"}",
+	"}",
+	")",
+	],
+	"description": "Log output to console"
+	},
+	"myFluttertoast": {
+	"prefix": "myFluttertoast",
+	"body": [
+	"Fluttertoast.showToast(",
+	"msg: \"This is Center Short Toast\",",
+	"toastLength: Toast.LENGTH_SHORT,",
+	"gravity: ToastGravity.CENTER,",
+	"timeInSecForIos: 1,",
+	"backgroundColor: Colors.white,",
+	"textColor: Colors.black",
+	");",
+	],
+	"description": "myFluttertoast"
+	},
+	"myInWell": {
+	"prefix": "myInWell",
+	"body": [
+	"InkWell(",
+	"onTap: () {},",
+	"child: Container(",
+	"width: 40,//ScreenUtil().getWidth(100),",
+	"height: 40,//ScreenUtil().getHeight(70),",
+	"padding: EdgeInsets.fromLTRB(3, 16, 3, 16),",
+	"child: Image.asset(\"images/menu_white.png\",fit: BoxFit.cover,width:ScreenUtil().getWidth(26),height:ScreenUtil().getHeight(24)),",
+	")",
+	")",
+	],
+	"description": "myInWell"
+	},
+	"myStack": {
+	"prefix": "myStack",
+	"body": [
+	"Stack(",
+	"children: <Widget>[",
+	"Container(",
+	"width: 100,",
+	"height: 100,",
+	"color: Colors.red,",
+	"),",
+	"Container(",
+	"width: 90,",
+	"height: 90,",
+	"color: Colors.blue,",
+	"),",
+	"Container(",
+	"width: 80,",
+	"height: 80,",
+	"color: Colors.green,",
+	"),",
+	"],",
+	"),",
+	],
+	"description": "myStack"
+	},
+	"myStackPositioned": {
+	"prefix": "myStackPositioned",
+	"body": [
+	"Stack(",
+	"children: <Widget>[",
+	"Positioned(",
+	"top: 100.0,",
+	"child: Container(",
+	"color: Colors.blue,",
+	"child: Text(\"第一个组件\"),",
+	"),",
+	"),",
+	"Positioned(",
+	"top: 200,",
+	"right: 100,",
+	"child: Container(",
+	"color: Colors.yellow,",
+	"child: Text(\"第二个组件\"),",
+	"),",
+	"),",
+	"Positioned(",
+	"left: 100.0,",
+	"child: Container(",
+	"color: Colors.red,",
+	"child: Text(\"第三个组件\"),",
+	"),",
+	"),",
+	"],",
+	"),",
+	],
+	"description": "myStackPositioned"
+	},
+	"myClipPath": {
+	"prefix": "myClipPath",
+	"body": [
+	"ClipPath(",
+	"clipper: OvalBottomBorderClipper(),",
+	"child: Container(",
+	"height: ScreenUtil().getHeight(80),",
+	"width: double.infinity,",
+	"color: Color(0xFFF34434),",
+	"),",
+	"),",
+	],
+	"description": "myClipPath"
+	},
+	"myStackAlign": {
+	"prefix": "myStackAlign",
+	"body": [
+	"Stack(children: <Widget>[",
+	"Align(",
+	"alignment: Alignment.topCenter,",
+	"child: Container(",
+	")",
+	"),",
+	"Align(",
+	"alignment: Alignment.topCenter,",
+	"child: Container(",
+	"width: double.infinity,",
+	"height: ScreenUtil().getHeight(221),",
+	"padding: EdgeInsets.fromLTRB(15, 10, 15, 0),",
+	"child: Container()",
+	")",
+	")",
+	"]",
+	")",
+	],
+	"description": "myStackAlign"
+	},
+	"myListView": {
+	"prefix": "myListView",
+	"body": [
+	"ListView(",
+	"children: <Widget>[",
+	"],",
+	"),",
+	],
+	"description": "myListView"
+	},
+	"myFutureBuilder": {
+	"prefix": "myFutureBuilder",
+	"body": [
+	"FutureBuilder(",
+	"future: requestdd(params),",
+	"builder: (context, snapshot){",
+	"return EasyRefresh(",
+	"refreshFooter: ClassicsFooter(",
+	"key: _footerKey,",
+	"bgColor: Theme.of(context).accentColor,",
+	"textColor: grefresh_textColor,",
+	"moreInfoColor: grefresh_moreInfoColor,",
+	"showMore: true,",
+	"noMoreText: '',",
+	"moreInfo: grefresh_moreInfo,",
+	"loadReadyText: grefresh_loadReadyText,",
+	"),",
+	"loadMore: () async {",
+	"var formPage = {'page': curPageNo};",
+	"// await request('url', formData: formPage).then((val) {",
+	"// var data = json.decode(val.toString());",
+	"// List moreList = (data['data'] as List).cast();",
+	"// setState(() {",
+	"// list.addAll(moreList);",
+	"// curPageNo++;",
+	"// });",
+	"// });",
+	"},",
+	"child:Container(",
+	"padding: EdgeInsets.fromLTRB(10, 20, 10, 30),",
+	"child: Text('Register'),",
+	")",
+	");",
+	"}",
+	")",
+	],
+	"description": "myFutureBuilder"
+	},
+	"myCard": {
+	"prefix": "myCard",
+	"body": [
+	"Card(",
+	"elevation: 3,",
+	"clipBehavior: Clip.antiAlias,",
+	"semanticContainer: false,",
+	"shape: RoundedRectangleBorder(",
+	"borderRadius: BorderRadius.all(Radius.circular(ScreenUtil().getWidth(6))),",
+	"),",
+	"child:Container(",
+	"decoration: BoxDecoration(",
+	"// borderRadius:BorderRadius.circular(6),",
+	"color: Colors.white,",
+	"boxShadow: [",
+	"BoxShadow(",
+	"color: Colors.black12,",
+	"offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
+	"blurRadius: 15.0, \/\/阴影模糊程度",
+	"spreadRadius: 1.0 \/\/阴影扩散程度",
+	")",
+	"]",
+	"),",
+	"child: Column(",
+	"mainAxisAlignment: MainAxisAlignment.spaceAround,",
+	"crossAxisAlignment: CrossAxisAlignment.center,",
+	"children:<Widget>[",
+	"ListTile(",
+	"title: Text('data.',style:TextStyle(fontSize:ScreenUtil().getSp(20),color: Util_Tool.themHeadTitleBlackColor)),",
+	"subtitle: Text('5 mar 2020',style:TextStyle(fontSize:14,color:Colors.black)),",
+	"leading: InkWell(",
+	"onTap:(){},",
+	"child:ClipOval(",
+	"child: SizedBox(",
+	"width:ScreenUtil().getWidth(35),",
+	"height: ScreenUtil().getHeight(35),",
+	"child:Image.network('http:\/\/blogimages.jspang.com/blogtouxiang1.jpg'),",
+	"),",
+	"),",
+	"),",
+	"trailing: InkWell(",
+	"child:Container(",
+	"padding: EdgeInsets.fromLTRB(13, 6, 13, 6),",
+	"decoration: BoxDecoration(",
+	"borderRadius:BorderRadius.circular(13),",
+	"color: Colors.red,",
+	"boxShadow: [",
+	"BoxShadow(",
+	"color: Colors.black12,",
+	"offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
+	"blurRadius: 15.0, \/\/阴影模糊程度",
+	"spreadRadius: 1.0 \/\/阴影扩散程度",
+	")",
+	"]",
+	"),",
+	"child: Text(tr('+FOLLOW'),style: TextStyle(fontSize:ScreenUtil().getSp(12),color:Colors.white),),",
+	"),",
+	"onTap:(){}",
+	")",
+	"),",
+	"Image.network('http:\/\/blogimages.jspang.com/blogtouxiang1.jpg',width:double.infinity,height:ScreenUtil().getHeight(160)),",
+	"Text('Check out our sale items with discounts up to 50%.',maxLines: 2,style:TextStyle(fontSize:14,color:Util_Tool.themHeadTitleBlackColor)),",
+	"Row(",
+	"mainAxisAlignment: MainAxisAlignment.start,",
+	"crossAxisAlignment: CrossAxisAlignment.center,",
+	"children: <Widget>[",
+	"ButtonBar(",
+	"alignment: MainAxisAlignment.spaceEvenly,",
+	"mainAxisSize: MainAxisSize.min,",
+	"children:<Widget>[",
+	"InkWell(",
+	"child:Image.asset(\"images\/graylike.png\",fit: BoxFit.cover,width:24,height:24),",
+	"onTap: (){},",
+	"),",
+	"InkWell(",
+	"child:Text('223',style:TextStyle(fontSize:14,color:Colors.black)),",
+	"onTap:(){}",
+	"),",
+	"],",
+	"),",
+	"ButtonBar(",
+	"alignment: MainAxisAlignment.spaceEvenly,",
+	"mainAxisSize: MainAxisSize.min,",
+	"children:<Widget>[",
+	"Image.asset(\"images\/message_1.png\",fit: BoxFit.cover,width:24,height:24),",
+	"Text('223',style:TextStyle(fontSize:14,color:Colors.black))",
+	"],",
+	"),",
+	"],",
+	")",
+	"]",
+	"),",
+	")",
+	");",
+	],
+	"description": "myCard"
+	},
+	"mySizedBoxH": {
+	"prefix": "mySizedBoxH",
+	"body": [
+	"SizedBox(height:8,),",
+	],
+	"description": "mySizedBoxH"
+	},
+	"mySizedBoxW": {
+	"prefix": "mySizedBoxW",
+	"body": [
+	"SizedBox(height:8,),",
+	],
+	"description": "mySizedBoxW"
+	},
+	"mySizedBoxH_SpUitl": {
+	"prefix": "mySizedBoxH_SpUitl",
+	"body": [
+	"SizedBox(height:ScreenUtil().getHeight(8),),",
+	],
+	"description": "mySizedBoxH_SpUitl"
+	},
+	"mySizedBoxW_SpUitl": {
+	"prefix": "mySizedBoxW_SpUitl",
+	"body": [
+	"SizedBox(height:ScreenUtil().getWidth(8),),",
+	],
+	"description": "mySizedBoxW_SpUitl"
+	},
+
+	"mySliverFixedExtentList": {
+	"prefix": "mySliverFixedExtentList",
+	"body": [
+	"SliverFixedExtentList(",
+	"itemExtent: 50, //child的长度或者宽度,取决于滚动方向.",
+	"delegate: ",
+	");",
+	],
+	"description": "mySliverFixedExtentList"
+	},
+
+	"mySliverFixedExtentList_ChildBuilder": {
+	"prefix": "mySliverFixedExtentList_ChildBuilder",
+	"body": [
+	"SliverFixedExtentList(",
+	"itemExtent: 50, //child的长度或者宽度,取决于滚动方向.",
+	"delegate: SliverChildBuilderDelegate((context, int index) {",
+	"},",
+	"childCount: 20,",
+	"),",
+	");",
+	],
+	"description": "mySliverFixedExtentList_ChildBuilder"
+	},
+
+	"mySliverFixedExtentList_ChildListD": {
+	"prefix": "mySliverFixedExtentList_ChildListD",
+	"body": [
+	"SliverFixedExtentList(",
+	"itemExtent: 50, //child的长度或者宽度,取决于滚动方向.",
+	"delegate: SliverChildListDelegate(",
+		"_gridLists.map((name){",
+		"return new Container(",
+			"alignment: Alignment.center,",
+			"color: Colors.white,",
+			"child: new Text(name),",
+		");",
+		"}).toList()",
+	"),",
+	");",
+	],
+	"description": "mySliverFixedExtentList_ChildListD"
+	},
+
+	"myBorder_SUtil": {
+	"prefix": "myBorder_SUtil",
+	"body": [
+	"Border(bottom: BorderSide(width: ScreenUtil().getWidth(1),color: Colors.grey))",
+	],
+	"description": "myBorder_SUtil"
+	},
+	"myBorder": {
+	"prefix": "myBorder",
+	"body": [
+	"Border(bottom: BorderSide(width: 1,color: Colors.grey))",
+	],
+	"description": "myBorder"
+	},
+
+	"myClipOval": {
+	"prefix": "myClipOval",
+	"body": [
+	"ClipOval(",
+	"child: Image.network(",
+	"'http://blogimages.jspang.com/blogtouxiang1.jpg',",
+	"width: ScreenUtil().getWidth(44),",
+	"height: ScreenUtil().getWidth(44),",
+	"fit: BoxFit.cover,",
+	")),",
+	],
+	"description": "myClipOval"
+	},
+	"myFlexible": {
+	"prefix": "myFlexible",
+	"body": [
+	"Flexible(",
+	"flex: 1,",
+	"child: Container(",
+	"color:Colors.white",
+	"))",
+	],
+	"description": "myFlexible"
+	},
+	"myExpended": {
+	"prefix": "myExpended",
+	"body": [
+	"Expended(",
+	"flex: 1,",
+	"child: Container(",
+	"color:Colors.white",
+	"))",
+	],
+	"description": "myExpended"
+	},
+	"myExpendedRowRaisedBtn": {
+	"prefix": "myExpendedRowRaisedBtn",
+	"body": [
+	"Row(",
+	"mainAxisAlignment: MainAxisAlignment.start,",
+	"crossAxisAlignment: CrossAxisAlignment.center,",
+	"children: <Widget>[",
+	"Expanded(",
+	"child: Container(",
+	"height: 50,",
+	"padding: EdgeInsets.fromLTRB(15, 0, 15, 0),",
+	"child: RaisedButton(",
+	"elevation: 3,",
+	"child: Text(",
+	"/'Confirm/',",
+	"style: TextStyle(fontSize: 14, color: Colors.white),",
+	"maxLines: 1,",
+	"),",
+	"shape: StadiumBorder(),",
+	"textColor: Theme.of(context).accentColor,",
+	"color: Theme.of(context).accentColor,",
+	"onPressed: () {},",
+	"),",
+	"))",
+	"],",
+	")",
+	],
+	"description": "myExpendedRowRaisedBtn"
+	},
+	"myFlexibleRowRaisedBtn": {
+	"prefix": "myFlexibleRowRaisedBtn",
+	"body": [
+	"Row(",
+	"mainAxisAlignment: MainAxisAlignment.start,",
+	"crossAxisAlignment: CrossAxisAlignment.center,",
+	"children: <Widget>[",
+	"Flexible(",
+	"child: Container(",
+	"height: 50,",
+	"padding: EdgeInsets.fromLTRB(15, 0, 15, 0),",
+	"child: RaisedButton(",
+	"elevation: 3,",
+	"child: Text(",
+	"'Confirm',",
+	"style: TextStyle(fontSize: 14, color: Colors.white),",
+	"maxLines: 1,",
+	"),",
+	"shape: StadiumBorder(),",
+	"textColor: Theme.of(context).accentColor,",
+	"color: Theme.of(context).accentColor,",
+	"onPressed: () {},",
+	"),",
+	"))",
+	"],",
+	")",
+	],
+	"description": "myFlexibleRowRaisedBtn"
+	},
+	"myrequestdd": {
+	"prefix": "myrequestdd",
+	"body": [
+	"void requestdd(Map param){",
+	"NetDataUtil().postGetuseramountinfo(param).then((value) {",
+	"print(\"=========moneydata=====$value\");",
+	"setState(() {",
+	"moneyData = value;",
+	"});",
+	"}).catchError((onError) {",
+	"print(\"页面请求失败 $onError\");",
+	"}).whenComplete(() {",
+	"print(\"页面whenComplete\");",
+	"});",
+	"}",
+	],
+	"description": "myrequestdd"
+	},
+	"mySmartRefresher": {
+	"prefix": "mySmartRefresher",
+	"body": [
+	"SmartRefresher(",
+	"enablePullDown: true,",
+	"enablePullUp: true,",
+	"header: WaterDropHeader(),",
+	"footer: CustomFooter(",
+	"builder: (BuildContext context, LoadStatus mode) {",
+	"Widget body;",
+	"if (mode == LoadStatus.idle) {",
+	"body = Text(gLoadStatusIdle);",
+	"} else if (mode == LoadStatus.loading) {",
+	"body = Text(gLoadStatusLoading); //CupertinoActivityIndicator();",
+	"} else if (mode == LoadStatus.failed) {",
+	"body = Text(gLoadStatusFailed);",
+	"} else if (mode == LoadStatus.canLoading) {",
+	"body = Text(gLoadStatusCanLoading);",
+	"} else {",
+	"body = Text(gNomoreData);",
+	"}",
+	"return Container(",
+	"height: 55.0,",
+	"child: Center(child: body),",
+	");",
+	"},",
+	"),",
+	"controller: _refreshController,",
+	"onRefresh: _onRefresh,",
+	"onLoading: _onLoading,",
+	"child:ListView.separated(",
+	"physics: AlwaysScrollableScrollPhysics(),",
+	"controller: _scrollController,",
+	"separatorBuilder: (BuildContext context, int index){",
+	"return Divider(color: Util_Tool.themLineGrayColor,);",
+	"},",
+	"itemBuilder: _buildListItem,",
+	"itemCount: glistData.length,",
+	")",
+	")",
+	],
+	"description": "mySmartRefresher"
+	},
+	"myListView.separated": {
+	"prefix": "ListView.separated",
+	"body": [
+	"ListView.separated(",
+	"physics: AlwaysScrollableScrollPhysics(),",
+	"controller: _scrollController,",
+	"separatorBuilder: (BuildContext context, int index){",
+	"return Divider(color: Util_Tool.themLineGrayColor,);",
+	"},",
+	"itemBuilder: (BuildContext context, int index){",
+	"return Text('text');",
+	"},",
+	"itemCount: glistData.length,",
+	")",
+	],
+	"description": "ListView.separated"
+	},
+	"myText.richTapGesture": {
+	"prefix": "myText.richTapGesture",
+	"body": [
+	"Text.rich(",
+	"TextSpan(",
+	"text: '',style: TextStyle(",
+	"fontSize: 14, color: Colors.orangeAccent),",
+	"recognizer: TapGestureRecognizer()..onTap = () {},",
+	"children: [",
+	"TextSpan(text: '',style: TextStyle(",
+	"fontSize: 14, color: Colors.orangeAccent),",
+	"recognizer: TapGestureRecognizer()..onTap = () {},",
+	"),",
+	"TextSpan(text: 'text'),",
+	"TextSpan(text: ' '),",
+	"WidgetSpan(",
+	"alignment: PlaceholderAlignment.baseline,",
+	"child: Text('data')),",
+	"WidgetSpan(child: Text('imge')),",
+	"TextSpan(text: ' '),",
+	"TextSpan(",
+	"text: '350.00',",
+	"style: TextStyle(",
+	"fontSize: 14, color: Colors.orangeAccent)),",
+	"TextSpan(text: '',style: TextStyle(",
+	"fontSize: 14, color: Colors.orangeAccent),",
+	"recognizer: TapGestureRecognizer()..onTap = () {},",
+	"),",
+	"]),",
+	"textAlign: TextAlign.center,",
+	"style: TextStyle(",
+	"color: Colors.black,",
+	"fontSize: 14,",
+	"fontWeight: FontWeight.w500,",
+	"),",
+	"),",
+	],
+	"description": "myText.richTapGesture"
+	},
+	"myText.rich": {
+	"prefix": "myText.rich",
+	"body": [
+	"Text.rich(",
+	"TextSpan(",
+	"children: [",
+	"WidgetSpan(",
+	"child: SizedBox(width: 14),",
+	"),",
+	"TextSpan(text: description),",
+	"WidgetSpan(",
+	"alignment: PlaceholderAlignment.middle,",
+	"child: Icon(",
+	"Icons.arrow_forward_ios,",
+	"color: Colors.white70,",
+	"size: 14,",
+	"),",
+	"),",
+	"]),",
+	"style: TextStyle(",
+	"color: Colors.white70,",
+	"fontSize: 14,",
+	"fontWeight: FontWeight.w500,",
+	"),",
+	"),",
+	],
+	"description": "myText.rich"
+	},
+	"myRichTextWidgetSpan": {
+	"prefix": "myRichTextWidgetSpan",
+	"body": [
+	"RichText(",
+	"text: TextSpan(",
+	"text: '登陆即同意',",
+	"style: TextStyle(fontSize: 14, color: Colors.black),",
+	"children: [",
+	"TextSpan(",
+	"text: '\"服务条款\"',",
+	"style: TextStyle(fontSize: 14, color: Colors.blue),",
+	"recognizer: TapGestureRecognizer()",
+	"..onTap = () {",
+	"print('点击了服务条款');",
+	"},",
+	"),",
+	"TextSpan(",
+	"text: '和',",
+	"style: TextStyle(fontSize: 14, color: Colors.black),",
+	"),",
+	"TextSpan(",
+	"text: '\"隐私政策\"',",
+	"style: TextStyle(fontSize: 14, color: Colors.blue),",
+	"recognizer: TapGestureRecognizer()",
+	"..onTap = () {",
+	"print('点击了隐私政策');",
+	"},",
+	"),",
+	"WidgetSpan(",
+	"alignment: PlaceholderAlignment.middle,",
+	"child: Image.asset(",
+	"'assets/noavatar.png',",
+	"width: 20,",
+	"height: 20,",
+	"),",
+	"),",
+	"],",
+	"),",
+	"),",
+	],
+	"description": "myRichTextWidgetSpan"
+	},
+	"mySwiperView": {
+	"prefix": "mySwiperView",
+	"body": [
+	"Widget SwiperView() {",
+	"return Container(",
+	"padding: const EdgeInsets.fromLTRB(0, 50, 0, 5),",
+	"width: MediaQuery.of(context).size.width,",
+	"height: 300,",
+	"child: Swiper(",
+	"itemCount: imageList.length,",
+	"itemBuilder: _swiperBuilder,",
+	"pagination: SwiperPagination(",
+	"alignment: Alignment.bottomRight,",
+	"margin: const EdgeInsets.fromLTRB(0, 0, 20, 10),",
+	"builder: DotSwiperPaginationBuilder(",
+	"color: Colors.black54, activeColor: Colors.white)),",
+	"controller: SwiperController(),",
+	"scrollDirection: Axis.horizontal,",
+	"autoplay: true,",
+	"onTap: (index) => print('点击了第$index'),",
+	"),",
+	");",
+	"}",
+	"Widget _swiperBuilder(BuildContext context, int index) {",
+	"return (imageList[index]);",
+	],
+	"description": "mySwiperView"
+	},
+	"mySliverAppBar": {
+	"prefix": "mySliverAppBar",
+	"body": [
+	"SliverAppBar(",
+	"title: Text('NINGHAO'),",
+	"pinned: true,",
+	"floating: true,",
+	"expandedHeight: 178.0,",
+	"flexibleSpace: FlexibleSpaceBar(",
+	"title: Text(",
+	"'Ninghao Flutter'.toUpperCase(),",
+	"style: TextStyle(",
+	"fontSize: 15.0,",
+	"letterSpacing: 3.0,",
+	"fontWeight: FontWeight.w400,",
+	"),",
+	"),",
+	"background: Image.network(",
+	"'https://resources.ninghao.net/images/overkill.png',",
+	"fit: BoxFit.cover,",
+	"),",
+	"),",
+	"),",
+	],
+	"description": "SliverAppBar"
+	},
+	"myCustomScrollView": {
+	"prefix": "myCustomScrollView",
+	"body": [
+	"myCustomScrollView(",
+	"slivers: <Widget>[",
+	"SliverAppBar(",
+	"pinned: true,",
+	"stretch: true,",
+	"expandedHeight: 200.0,",
+	"flexibleSpace: FlexibleSpaceBar(",
+	"title: Text('开学季'),",
+	"background: Image.network(",
+	"\"https://goss.cfp.cn/creative/vcg/800/new/VCG211165042753.jpg\",",
+	"fit: BoxFit.cover,",
+	"),",
+	"),",
+	"),",
+	"SliverPadding(padding: EdgeInsets.only(top: 10),),",
+	"SliverGrid(",
+	"//调整间距",
+	"gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(",
+	"crossAxisSpacing: 10,",
+	"maxCrossAxisExtent: 200,",
+	"mainAxisSpacing: 10,",
+	"childAspectRatio: 4.0",
+	"),",
+	//加载内容",
+	"delegate: SliverChildBuilderDelegate(",
+	"(context,index) {",
+	"return Container( //设置每个item的内容",
+	"alignment: Alignment.center,",
+	"color: Colors.orangeAccent,",
+	"child: Text(\"$index\"),",
+	");",
+	"},",
+	"childCount: 20, //设置个数",
+	"),",
+	"),",
+	"SliverPadding(padding: EdgeInsets.only(top: 10),),",
+	"SliverFixedExtentList(",
+	"itemExtent: 50,",
+	"//加载内容",
+	"delegate: SliverChildBuilderDelegate(",
+	"(context, index) {",
+	"return Container(",
+	"alignment: Alignment.center,",
+	"color: Colors.deepPurpleAccent,",
+	"child: Text('$index'),",
+	");",
+	"},",
+	"//设置显示个数",
+	"childCount: 20,",
+	"),",
+	")",
+	"],",
+	");",
+	],
+	"description": "CustomScrollView"
+	},
+	"mySliverPadding": {
+	"prefix": "mySliverPadding",
+	"body": [
+	"SliverPadding(padding: EdgeInsets.only(top: 10),),",
+	],
+	"description": "mySliverPadding"
+	},
+
+	"mySliverToBoxAdapter": {
+	"prefix": "mySliverToBoxAdapter",
+	"body": [
+		"SliverToBoxAdapter(",
+		  "child: Container(",
+			"height: 66,",
+			"color: Colors.cyanAccent,",
 			"),",
-			"rightWidget: GestureDetector(",
-			"  child: SvgPicture.asset(",
-			"    _isobscureText ? 'images/.svg' : 'images/.svg',",
-			"  ),",
-			"  onTap: () {",
-			"    _isobscureText = !_isobscureText;",
-			"    setState(() {});",
-			"  },",
-			"  behavior: HitTestBehavior.opaque,",
+		  "),",
+	],
+	"description": "mySliverToBoxAdapter"
+	},
+
+	"mySliverFillViewport": {
+	"prefix": "mySliverToBoxAdapter",
+	"body": [
+		"SliverFillViewport(",
+		"delegate:",
+		"viewportFraction:1.0,//占屏幕的比例",
+		"),",
+	],
+	"description": "mySliverToBoxAdapter"
+	},
+
+	"mySliverFillViewport_ChildBuilderD": {
+	"prefix": "mySliverFillViewport_ChildBuilderD",
+	"body": [
+		"SliverFillViewport(",
+		"delegate:new SliverChildBuilderDelegate(",
+				"(BuildContext context, int index) {",
+				"return new Container(",
+					"alignment: Alignment.center,",
+					"color: Colors.lightBlue,",
+					"child: new Text('SliverFillViewport'),",
+				");",
+				"}, childCount: 1",
 			"),",
-			"focusNode: _confirmFocusNode0,",
-			"textInputAction: TextInputAction.next,",
-			"onChanged: (String val) {",
-			"  _pinStr = val;",
-			"  setState(() {});",
-			"},",
-			"onCompleted: (String val) {",
-			"  _pinStr = val;",
-			"  setState(() {});",
-			"})",
-					 
-        ],
- 
-        "description": "mpinCodeWdiget"
-					 
+		"viewportFraction:1.0,//占屏幕的比例",
+		"),",
+	],
+	"description": "mySliverFillViewport_ChildBuilderD"
+	},
+
+	"mySliverFillViewport_ChildListD": {
+	"prefix": "mySliverFillViewport_ChildListD",
+	"body": [
+		"SliverFillViewport(",
+		"delegate:SliverChildListDelegate(",
+			"_gridLists.map((item){",
+				"return Container();",
+			"}).toList()",
+		"),",
+		"viewportFraction:1.0,//占屏幕的比例",
+		"),",
+	],
+	"description": "mySliverFillViewport_ChildListD"
+	},
+
+	"mySliverPadding_ToBoxAdapter": {
+	"prefix": "mySliverPadding_ToBoxAdapter",
+	"body": [
+		"SliverPadding(",
+		"padding: EdgeInsets.only(top: 10),",
+		"sliver: SliverToBoxAdapter(",
+		  "child: Container(",
+			"height: 66,",
+			"color: Colors.cyanAccent,",
+			"),",
+		  "),",
+		"),",
+	],
+	"description": "mySliverPadding_ToBoxAdapter"
+	},
+
+
+	"mySliverFillRemaining": {
+	"prefix": "mySliverFillRemaining",
+	"body": [
+		"SliverFillRemaining(",
+		"hasScrollBody: false,",
+		"child: Container(),",
+	  "),",
+	],
+	"description": "mySliverFillRemaining"
 	},
 
 	
-	"import i_textfield": {
- 
-		        "prefix": "mimport i_textfield",
-		 
-		        "body": [
-		 
-		            "import 'package:flutteridcm/widgets/i_textfield.dart';",
-		 
-		        ],
-		 
-		        "description": "import i_textfield"
-		 
-		    },
-		"import str_util": {
- 
-			        "prefix": "mimport str_util",
-			 
-			        "body": [
-			 
-			            "import 'package:flutteridcm/utils/str_util.dart';",
-			 
-			        ],
-			 
-			        "description": "import str_util"
-			 
-			    },
-		
-	"import style": {
- 
-		        "prefix": "mimport style",
-		 
-		        "body": [
-		 
-		            "import 'package:flutteridcm/style.dart';",
-		 
-		        ],
-		 
-		        "description": "import style"
-		 
-		    },
+
+	"mySliverGridDelegate_max": {
+	"prefix": "mySliverGridDelegate_max",
+	"body": [
+		"SliverGridDelegateWithMaxCrossAxisExtent(",
+		"maxCrossAxisExtent: 150,",
+		"mainAxisSpacing: 10.0, //主轴中间间距",
+		"crossAxisSpacing: 10.0, //副轴中间间距",
+		"childAspectRatio: 2.0, //item 宽高比",
+	  "),",
+	],
+	"description": "mySliverGridDelegate_max"
+	},
 
 
-		"import flutter_svg": {
-		 
-			        "prefix": "mimport flutter_svg",
-			 
-			        "body": [
-			 
-			            "import 'package:flutter_svg/flutter_svg.dart';",
-			 
-			        ],
-			 
-			        "description": "import flutter_svg"
-			 
-			    },
+	"mySliverGridDelegate_fix": {
+	"prefix": "mySliverGridDelegate_fix",
+	"body": [
+		"SliverGridDelegateWithFixedCrossAxisCount(",
+		"crossAxisCount: 4,",
+		"mainAxisSpacing: 10.0, //主轴中间间距",
+		"crossAxisSpacing: 10.0, //副轴中间间距",
+		"childAspectRatio: 2.0, //item 宽高比",
+	  "),",
+	],
+	"description": "mySliverGridDelegate_fix"
+	},
 
-		
-		 
-		    "myRichText": {
-		 
-		        "prefix": "myRichText",
-		 
-		        "body": [
-		 
-		            "RichText(text: TextSpan(",
-		 
-		            " text: 'By regisetering for an Shopsave account,you are agree that you have read and accepted our',",
-		 
-		            "style: TextStyle(",
-		 
-		            "color:Colors.grey,",
-		 
-		            "fontSize:14,",
-					"decoration: TextDecoration.none",
-		            "),",
-		 
-		            "children: [",
-		 
-		            "TextSpan(",
-		 
-		            "text:'Shopsave FreeMenbership Agreement',",
-		 
-		            "style:TextStyle(fontSize:14,color:Colors.greenAccent,decoration: TextDecoration.none),",
-		 
-		            "//recognizer: TapGestureRecognizer()..onTap = () {},",
-		 
-		            "),",
-		 
-		            "TextSpan(",
-		 
-		            "text: 'and',",
-		 
-		            "style: TextStyle(",
-		 
-		            "color: Colors.grey,",
-					"decoration: TextDecoration.none,",
-		            "fontSize: 14)),",
-		 
-		            "TextSpan(",
-		 
-		            "text: 'Privacy Policy',",
-		 
-		            "style: TextStyle(",
-					"decoration: TextDecoration.none",
-		            "color: Colors.greenAccent,",
-		 
-		            "fontSize: 14),",
-		 
-		            "//recognizer: TapGestureRecognizer()..onTap = () {},",
-		 
-		            "..onTap = () {}",
-		 
-		            "),",
-		 
-		            "]",
-		 
-		            ")",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "myRichText"
-		 
-		    },
-		 
-		    "myListTileC": {
-		 
-		        "prefix": "myListTileC",
-		 
-		        "body": [
-		 
-		            "ListTile(",
-		 
-		            "title: Text(tr('SIGN IN')),",
-		 
-		            "trailing: ClipOval(",
-		 
-		            "child: Image.network('http://blogimages.jspang.com/blogtouxiang1.jpg' ,",
-		 
-		            "width: 45,",
-		 
-		            "height: 45,",
-		 
-		            "fit: BoxFit.cover,)",
-		 
-		            "),",
-		 
-		            "leading: CircleAvatar(",
-		 
-		            "backgroundImage: NetworkImage(imageUrl),",
-		 
-		            "),",
-		 
-		            "onTap: (){",
-		 
-		            "Navigator.push(context, ",
-		 
-		            " MaterialPageRoute(",
-		 
-		            "builder: (context){",
-		 
-		            "return Text('title',style:TextStyle(fontSize:10, decoration: TextDecoration.none,color:Colors.black));",
-		 
-		            "},",
-		 
-		            "fullscreenDialog: true",
-		 
-		            "),",
-		 
-		            ");",
-		 
-		            "},",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "myListTileC"
-		 
-		    },
-		 
-		    "myListTileSystem": {
-		 
-		        "prefix": "myListTileSystem",
-		 
-		        "body": [
-		 
-		            "ListTile(",
-		 
-		                "title:Text(",
-		 
-		                "'title',",
-		 
-		                "style:TextStyle(fontSize:ScreenUtil().getSp(12),",
-						"decoration: TextDecoration.none",
-		                "color:Util_Tool.themsubTitleGrayColor)),",
-		 
-		                "subtitle: Text(",
-		 
-		                "'title',",
-		 
-		                "style:TextStyle(fontSize:ScreenUtil().getSp(12),",
-						"decoration: TextDecoration.none",
-		                "color:Util_Tool.themsubTitleGrayColor)),",
-		 
-		                "leading:Text(''),",
-		 
-		                "trailing:Text('')",
-		 
-		                "onTap: (){},",
-		 
-		            "),",
-		 
-		            
-		 
-		        ],
-		 
-		        "description": "myListTileSystem"
-		 
-		    },
-		 
-		    
-		 
-		    "myNavPFD": {
-		 
-		        "prefix": "myNavPFD",
-		 
-		        "body": [
-		 
-		            "Navigator.push(context, ",
-		 
-		            "MaterialPageRoute(",
-		 
-		            "builder: (context){",
-		 
-		            "return Text('');",
-		 
-		            "},",
-		 
-		            "fullscreenDialog: true",
-		 
-		            "),",
-		 
-		            ");",
-		 
-		        ],
-		 
-		        "description": "myNavPFD"
-		 
-		    },
-		 
-		    "myNavNPName": {
-		 
-		        "prefix": "myNavNPName",
-		 
-		        "body": [
-		 
-		            "Navigator.of(context).pushNamed('/');",
-		 
-		        ],
-		 
-		        "description": "myNavNPName"
-		 
-		    },
-		 
-		    "myNavNPNaParam": {
-		 
-		        "prefix": "myNavNPNaParam",
-		 
-		        "body": [
-		 
-		            "Navigator.pushNamed(",
-		 
-		                "context,",
-		 
-		                "'/weather',",
-		 
-		                "arguments: <String, String>{",
-		 
-		                "'key': 'value',",
-		 
-		                
-		 
-		            "},",
-		 
-		 
-		 
-		        ],
-		 
-		        "description": "myNavNPNaParam"
-		 
-		    },
-		 
-		    "myMediaQuery": {
-		 
-		        "prefix": "myMediaQuery",
-		 
-		        "body": [
-		 
-		            "MediaQuery.of(context).size"
-		 
-		        ],
-		 
-		        "description": "myMediaQuery"
-		 
-		    },
-		 
-		    
-		 
-		    "myNavNPRe": {
-		 
-		        "prefix": "myNavNPRe",
-		 
-		        "body": [
-		 
-		            "Navigator.of(context).pushReplacementNamed('/screen4');",
-		 
-		        ],
-		 
-		        "description": "myNavNPRe"
-		 
-		    },
-		 
-		    "myNavNPARUntil": {
-		 
-		        "prefix": "myNavNPARUntil",
-		 
-		        "body": [
-		 
-		            "Navigator.of(context).pushNamedAndRemoveUntil(",
-		 
-		             "'/screen4', ModalRoute.withName('/screen1'));",
-		 
-		        ],
-		 
-		        "description": "myNavNPARUntil"
-		 
-		    },
-		 
-		    "myNavPRepalce": {
-		 
-		        "prefix": "myNavPRepalce",
-		 
-		        "body": [
-		 
-		            "Navigator.pushReplacement(",
-		 
-		            "context,",
-		 
-		            "new MaterialPageRoute(builder: (context) => RegisterAccount()),",
-		 
-		            ");",
-		 
-		        ],
-		 
-		        "description": "myNavPRepalce"
-		 
-		    },
-		 
-		    "myNavpop": {
-		 
-		        "prefix": "myNavpop",
-		 
-		        "body": [
-		 
-		            "Navigator.of(context).pop();",
-		 
-		        ],
-		 
-		        "description": "myNavpop"
-		 
-		    },
-		 
-		    "myNavpopNUntil": {
-		 
-		        "prefix": "myNavpopNUntil",
-		 
-		        "body": [
-		 
-		            "Navigator.of(context).popUntil(ModalRoute.withName('/'));",
-		 
-		        ],
-		 
-		        "description": "myNavpopNUntil"
-		 
-		    },
-		 
-		    "myNavpopNAndPName": {
-		 
-		        "prefix": "myNavpopNAndPName",
-		 
-		        "body": [
-		 
-		            "Navigator.of(context).popAndPushNamed('/screen3');",
-		 
-		        ],
-		 
-		        "description": "myNavpopNAndPName"
-		 
-		    },
-		 
-		    "myNavPPRemoveUtil": {
-		 
-		        "prefix": "myNavPPRemoveUtil",
-		 
-		        "body": [
-		 
-		            "Navigator.pushAndRemoveUntil(",
-		 
-		            "context, new MaterialPageRoute(builder: (context)=> Register_Login_Page()),",
-		 
-		            "(route) => Route == null,",
-		 
-		            ");",
-		 
-		        ],
-		 
-		        "description": "myNavPPRemoveUtil"
-		 
-		    },
-		 
-		    "myNavPTransition": {
-		 
-		        "prefix": "myNavPTransition",
-		 
-		        "body": [
-		 
-		            "Navigator.of(context).push(new PageRouteBuilder(pageBuilder:",
-		 
-		                    "(BuildContext context, Animation<double> animation,",
-		 
-		                        "Animation<double> secondaryAnimation) {",
-		 
-		                      "return Text('11');",
-		 
-		                    "}, transitionsBuilder: (",
-		 
-		                      "BuildContext context,",
-		 
-		                      "Animation<double> animation,",
-		 
-		                      "Animation<double> secondaryAnimation,",
-		 
-		                      "Widget child,",
-		 
-		                    ") {",
-		 
-		                     " // 添加一个平移动画",
-		 
-		                      "return BRouter.createTransition(animation, child);",
-		 
-		                    "}));",
-		 
-		                    "/// 创建一个平移变换",
-		 
-		                    "/// 跳转过去查看源代码，可以看到有各种各样定义好的变换",
-		 
-		                    "static SlideTransition createTransition(",
-		 
-		                        "Animation<double> animation, Widget child) {",
-		 
-		                      "return new SlideTransition(",
-		 
-		                        "position: new Tween<Offset>(",
-		 
-		                          "begin: const Offset(1.0, 0.0),",
-		 
-		                          "end: const Offset(0.0, 0.0),",
-		 
-		                        ").animate(animation),",
-		 
-		                        "child: child, // child is the value returned by pageBuilder",
-		 
-		                      ");",
-		 
-		                    "}",
-		 
-		        ],
-		 
-		        "description": "myNavPTransition"
-		 
-		    },
-		 
-		    "myIcon": {
-		 
-		        "prefix": "myIcon",
-		 
-		        "body": [
-		 
-		            "Icon(Icons.home,size: 20,color:Colors.red)",
-		 
-		        ],
-		 
-		        "description": "Icon"
-		 
-		    },
-		 
-		    "mythenvalue": {
-		 
-		        "prefix": ".mythenvalue",
-		 
-		        "body": [
-		 
-		            ".then((value) {",
-		 
-		            "print(\"页面成功了哦 $value\");",
-		 
-		            "}).catchError((onError) {",
-		 
-		            "print(\"页面请求失败 $onError\");",
-		 
-		            "}).whenComplete(() {",
-		 
-		            "print(\"页面whenComplete\");",
-		 
-		            "});",
-		 
-		        ],
-		 
-		        "description": "mythenvalue"
-		 
-		    },
-		 
-		    "Print to console": {
-		 
-		        "prefix": "log",
-		 
-		        "body": [
-		 
-		            "FutureBuilder(",
-		 
-		                "future: request(),",
-		 
-		                "builder:(context,snapshot){",
-		 
-		                "if (snapshot.hasData)",
-		 
-		                "{",
-		 
-		                    "return Container(",
-		 
-		                    "padding: EdgeInsets.fromLTRB(10, 20, 10, 30),",
-		 
-		                    "child: Text('Register'),",
-		 
-		                    ");",
-		 
-		                "}else{",
-		 
-		                    "return Center(",
-		 
-		                    "child:Text('text')",
-		 
-		                    ");",
-		 
-		                "}",
-		 
-		                "}",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "Log output to console"
-		 
-		    },
-		 
-		    
-		 
-		    "myFluttertoast": {
-		 
-		        "prefix": "myFluttertoast",
-		 
-		        "body": [
-		 
-		            "Fluttertoast.showToast(",
-		 
-		                      "msg: \"This is Center Short Toast\",",
-		 
-		                      "toastLength: Toast.LENGTH_SHORT,",
-		 
-		                      "gravity: ToastGravity.CENTER,",
-		 
-		                      "timeInSecForIosWeb: 1,",
-		 
-		                      "backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black : Colors.white,",
-		 
-		                      "textColor: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black",
-		 
-		                    ");",
-		 
-		        ],
-		 
-		        "description": "myFluttertoast"
-		 
-		    },
-		 
-		 
-		 
-		    "myInWell": {
-		 
-		        "prefix": "myInWell",
-		 
-		        "body": [
-		 
-		        "InkWell(",
-		 
-		              
-		 
-		            "onTap: () {},",
-		 
-		                "child: Container(",
-		 
-		                    "width: 40,//ScreenUtil().getWidth(100),",
-		 
-		                    "height: 40,//ScreenUtil().getHeight(70),",
-		 
-		                    "padding: EdgeInsets.fromLTRB(3, 16, 3, 16),",
-		 
-		                    "child: Image.asset(\"images/menu_white.png\",fit: BoxFit.cover,width:ScreenUtil().getWidth(26),height:ScreenUtil().getHeight(24)),",
-		 
-		                ")",
-		 
-		        ")",
-		 
-		        ],
-		 
-		        "description": "myInWell"
-		 
-		    },
-		 
-		    "myStack": {
-		 
-		        "prefix": "myStack",
-		 
-		        "body": [
-		 
-		            "Stack(",
-		 
-		                "children: <Widget>[",
-		 
-		                "Container(",
-		 
-		                    "width: 100,",
-		 
-		                    "height: 100,",
-		 
-		                    "color: Colors.red,",
-		 
-		                "),",
-		 
-		                "Container(",
-		 
-		                    "width: 90,",
-		 
-		                    "height: 90,",
-		 
-		                    "color: Colors.blue,",
-		 
-		                "),",
-		 
-		                "Container(",
-		 
-		                    "width: 80,",
-		 
-		                    "height: 80,",
-		 
-		                    "color: Colors.green,",
-		 
-		                "),",
-		 
-		                "],",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "myStack"
-		 
-		    },
-		 
-		    "myStackPositioned": {
-		 
-		        "prefix": "myStackPositioned",
-		 
-		        "body": [
-		 
-		            "Stack(",
-		 
-		                "children: <Widget>[",
-		 
-		                "Positioned(",
-		 
-		                    "top: 100.0,",
-		 
-		                    "child: Container(",
-		 
-		                    "color: Colors.blue,",
-		 
-		                    "child: Text(\"第一个组件\"),",
-		 
-		                    "),",
-		 
-		                "),",
-		 
-		                "Positioned(",
-		 
-		                    "top: 200,",
-		 
-		                    "right: 100,",
-		 
-		                    "child: Container(",
-		 
-		                    "color: Colors.yellow,",
-		 
-		                    "child: Text(\"第二个组件\"),",
-		 
-		                    "),",
-		 
-		                "),",
-		 
-		                "Positioned(",
-		 
-		                    "left: 100.0,",
-		 
-		                    "child: Container(",
-		 
-		                    "color: Colors.red,",
-		 
-		                    "child: Text(\"第三个组件\"),",
-		 
-		                    "),",
-		 
-		                "),",
-		 
-		                "],",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "myStackPositioned"
-		 
-		    },
-		 
-		    
-		 
-		    "myClipPath": {
-		 
-		        "prefix": "myClipPath",
-		 
-		        "body": [
-		 
-		            "ClipPath(",
-		 
-		              "clipper: OvalBottomBorderClipper(),",
-		 
-		              "child: Container(",
-		 
-		                "height: ScreenUtil().getHeight(80),",
-		 
-		                "width: double.infinity,",
-		 
-		                "color: Color(0xFFF34434),",
-		 
-		              "),",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "myClipPath"
-		 
-		    },
-		 
-		    "myStackAlign": {
-		 
-		        "prefix": "myStackAlign",
-		 
-		        "body": [
-		 
-		            "Stack(children: <Widget>[",
-		 
-		                "Align(",
-		 
-		                  "alignment: Alignment.topCenter,",
-		 
-		                  "child: Container(",
-		 
-		                    
-		 
-		                  ")",
-		 
-		                "),",
-		 
-		                "Align(",
-		 
-		                    "alignment: Alignment.topCenter,", 
-		 
-		                    "child: Container(",
-		 
-		                      "width: double.infinity,",
-		 
-		                     "height: ScreenUtil().getHeight(221),",
-		 
-		                      "padding: EdgeInsets.fromLTRB(15, 10, 15, 0),",
-		 
-		                      "child: Container()",
-		 
-		                    ")",
-		 
-		                ")",
-		 
-		              "]",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "myStackAlign"
-		 
-		    },
-		 
-		    "myListView": {
-		 
-		        "prefix": "myListView",
-		 
-		        "body": [
-		 
-		            "ListView(",
-		 
-		          
-		 
-		                "children: <Widget>[",
-		 
-		                
-		 
-		                "],",
-		 
-		            "),",
-		 
-		        ],
-		 
-		        "description": "myListView"
-		 
-		    },
-		 
-		    "myFutureBuilder": {
-		 
-		        "prefix": "myFutureBuilder",
-		 
-		        "body": [
-		 
-		            "FutureBuilder(",
-		 
-		                "future: requestdd(params),",
-		 
-		                "builder: (context, snapshot){",
-		 
-		                    "return EasyRefresh(",
-		 
-		                    "refreshFooter: ClassicsFooter(",
-		 
-		                    "key: _footerKey,",
-		 
-		                    "bgColor: Theme.of(context).accentColor,",
-		 
-		                    "textColor: grefresh_textColor,",
-		 
-		                    "moreInfoColor: grefresh_moreInfoColor,",
-		 
-		                    "showMore: true,",
-		 
-		                    "noMoreText: '',",
-		 
-		                    "moreInfo: grefresh_moreInfo,",
-		 
-		                    "loadReadyText: grefresh_loadReadyText,",
-		 
-		                    "),",
-		 
-		                    "loadMore: () async {",
-		 
-		                    "var formPage = {'page': curPageNo};",
-		 
-		                    "// await request('url', formData: formPage).then((val) {",
-		 
-		                    "//   var data = json.decode(val.toString());",
-		 
-		                    "//   List moreList = (data['data'] as List).cast();",
-		 
-		                    "//   setState(() {",
-		 
-		                    "//     list.addAll(moreList);",
-		 
-		                    "//     curPageNo++;",
-		 
-		                    "//   });",
-		 
-		                    "// });",
-		 
-		                    "},",
-		 
-		                    "child:Container(",
-		 
-		                    "padding: EdgeInsets.fromLTRB(10, 20, 10, 30),",
-		 
-		                    "child: Text('Register'),",
-		 
-		                    ")",
-		 
-		                ");",
-		 
-		                "}",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "myFutureBuilder"
-		 
-		    },
-		 
-		    "myCard": {
-		 
-		        "prefix": "myCard",
-		 
-		        "body": [
-		 
-		            "Card(",
-		 
-		            "elevation: 3,",
-		 
-		            "clipBehavior: Clip.antiAlias,",
-		 
-		            "semanticContainer: false,",
-		 
-		            "shape: RoundedRectangleBorder(",
-		 
-		              "borderRadius: BorderRadius.all(Radius.circular(ScreenUtil().getWidth(6))),",
-		 
-		            "),",
-		 
-		            "child:Container(",
-		 
-		            
-		 
-		            "decoration: BoxDecoration(",
-		 
-		              "// borderRadius:BorderRadius.circular(6),",
-		 
-		              "color: Colors.white,",
-		 
-		              "boxShadow: [",
-		 
-		                "BoxShadow(",
-		 
-		                    "color: Colors.black12,",
-		 
-		                    "offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
-		 
-		                    "blurRadius: 15.0, \/\/阴影模糊程度",
-		 
-		                    "spreadRadius: 1.0 \/\/阴影扩散程度",
-		 
-		                    ")",
-		 
-		              "]",
-		 
-		            "),",
-		 
-		            "child: Column(",
-		 
-		              "mainAxisAlignment: MainAxisAlignment.spaceAround,",
-		 
-		              "crossAxisAlignment: CrossAxisAlignment.center,",
-		 
-		                "children:<Widget>[",
-		 
-		                  "ListTile(",
-		 
-		                    "title: Text('data.',style:TextStyle(fontSize:ScreenUtil().getSp(20),color: Util_Tool.themHeadTitleBlackColor,decoration: TextDecoration.none)),",
-		 
-		                    "subtitle: Text('5 mar 2020',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none)),",
-		 
-		                    "leading: InkWell(",
-		 
-		                        "onTap:(){},",
-		 
-		                        "child:ClipOval(", 
-		 
-		                          "child: SizedBox(",
-		 
-		                            "width:ScreenUtil().getWidth(35),",
-		 
-		                            "height: ScreenUtil().getHeight(35),",
-		 
-		                            "child:Image.network('http:\/\/blogimages.jspang.com/blogtouxiang1.jpg'),",
-		 
-		                          "),",
-		 
-		                        "),",
-		 
-		                    "),",
-		 
-		                    "trailing: InkWell(",
-		 
-		                      
-		 
-		                      "child:Container(",
-		 
-		                        "padding: EdgeInsets.fromLTRB(13, 6, 13, 6),",
-		 
-		                        "decoration: BoxDecoration(",
-		 
-		                          "borderRadius:BorderRadius.circular(13),",
-		 
-		                          "color: Colors.red,",
-		 
-		                          "boxShadow: [",
-		 
-		                            "BoxShadow(",
-		 
-		                                "color: Colors.black12,",
-		 
-		                                "offset: Offset(0.0, 15.0), \/\/阴影xy轴偏移量",
-		 
-		                                "blurRadius: 15.0, \/\/阴影模糊程度",
-		 
-		                                "spreadRadius: 1.0 \/\/阴影扩散程度",
-		 
-		                                ")",
-		 
-		                          "]",
-		 
-		                        "),",
-		 
-		                        "child: Text(tr('+FOLLOW'),style: TextStyle(fontSize:ScreenUtil().getSp(12),color:Colors.white,decoration: TextDecoration.none),),",
-		 
-		                      "),",
-		 
-		                      "onTap:(){}",
-		 
-		                    ")",
-		 
-		                  "),",
-		 
-		                  "Image.network('http:\/\/blogimages.jspang.com/blogtouxiang1.jpg',width:double.infinity,height:ScreenUtil().getHeight(160)),",
-		 
-		                  "Text('Check out our sale items with discounts up to 50%.',maxLines: 2,style:TextStyle(fontSize:14,color:Util_Tool.themHeadTitleBlackColor,decoration: TextDecoration.none)),",
-		 
-		                  "Row(",
-		 
-		                    "mainAxisAlignment: MainAxisAlignment.start,",
-		 
-		                    "crossAxisAlignment: CrossAxisAlignment.center,",
-		 
-		                    "children: <Widget>[",
-		 
-		                      "ButtonBar(",
-		 
-		                        "alignment: MainAxisAlignment.spaceEvenly,",
-		 
-		                        "mainAxisSize: MainAxisSize.min,",
-		 
-		                        "children:<Widget>[",
-		 
-		                          "InkWell(",
-		 
-		                            "child:Image.asset(\"images\/graylike.png\",fit: BoxFit.cover,width:24,height:24),",
-		 
-		                            "onTap: (){},",
-		 
-		                          "),",
-		 
-		                          "InkWell(",
-		 
-		                            "child:Text('223',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none)),",
-		 
-		                            "onTap:(){}",
-		 
-		                          "),",
-		 
-		                          
-		 
-		                        "],",
-		 
-		                        
-		 
-		                      "),",
-		 
-		                      "ButtonBar(",
-		 
-		                        "alignment: MainAxisAlignment.spaceEvenly,",
-		 
-		                        "mainAxisSize: MainAxisSize.min,",
-		 
-		                        "children:<Widget>[",
-		 
-		                          "Image.asset(\"images\/message_1.png\",fit: BoxFit.cover,width:24,height:24),",
-		 
-		                          "Text('223',style:TextStyle(fontSize:14,color:Colors.black,decoration: TextDecoration.none))",
-		 
-		                        "],",
-		 
-		                        
-		 
-		                      "),",
-		 
-		                    "],",
-		 
-		                  ")",
-		 
-		                "]",
-		 
-		              "),",
-		 
-		            ")",
-		 
-		          ");",
-		 
-		        ],
-		 
-		        "description": "myCard"
-		 
-		    },
-		 
-		    "mySizedBoxH": {
-		 
-		        "prefix": "mySizedBoxH",
-		 
-		        "body": [
-		 
-		            "SizedBox(width:8,),",
-		 
-		        ],
-		 
-		        "description": "mySizedBoxH"
-		 
-		    },
-		 
-		    "mySizedBoxV": {
-		 
-		        "prefix": "mySizedBoxV",
-		 
-		        "body": [
-		 
-		            "SizedBox(height:8,),",
-		 
-		        ],
-		 
-		        "description": "mySizedBoxV"
-		 
-		    },
-		    "mySizedBoxH_SpUitl": {
-		 
-		        "prefix": "mySizedBoxH_SpUitl",
-		 
-		        "body": [
-		 
-		            "SizedBox(width:ScreenUtil().getWidth(8),),",
-		 
-		        ],
-		 
-		        "description": "mySizedBoxH_SpUitl"
-		 
-		    },
-		 
-		    "mySizedBoxV_SpUitl": {
-		 
-		        "prefix": "mySizedBoxV_SpUitl",
-		 
-		        "body": [
-		 
-		            "SizedBox(height:ScreenUtil().getWidth(8),),",
-		 
-		        ],
-		 
-		        "description": "mySizedBoxV_SpUitl"
-		 
-		    },
-		 
-		    
-		   "mySizedBoxH_Sc": {
-		 
-		        "prefix": "mySizedBoxH_Sc",
-		 
-		        "body": [
-		 
-		            "SizedBox(height: ScreenAdapter.width(24),),",
-		 
-		        ],
-		 
-		        "description": "mySizedBoxH_Sc"
-			 
-			},
-			    "mySizedBoxV_Sc": {
-		 
-			        "prefix": "mySizedBoxH_Sc",
-			 
-			        "body": [
-			 
-			            "SizedBox(height: ScreenAdapter.height(24),),",
-			 
-			        ],
-			 
-			        "description": "mySizedBoxH_Sc"
-			 
-			},
-		 
-		    "myBorder": {
-		 
-		        "prefix": "myBorder",
-		 
-		        "body": [
-		 
-		            "Border(bottom: BorderSide(width: ScreenUtil().getWidth(1),color: Util_Tool.themLineGrayColor))",
-		 
-		        ],
-		 
-		        "description": "myBorder"
-		 
-		    },
-		 
-		    "myClipOval": {
-		 
-		        "prefix": "myClipOval",
-		 
-		        "body": [
-		 
-		            "ClipOval(",
-		 
-		                "child: Image.network(",
-		 
-		                "'http://blogimages.jspang.com/blogtouxiang1.jpg',",
-		 
-		                "width: ScreenUtil().getWidth(44),",
-		 
-		                "height: ScreenUtil().getWidth(44),",
-		 
-		                "fit: BoxFit.cover,",
-		 
-		            ")),",
-		 
-		        ],
-		 
-		        "description": "myClipOval"
-		 
-		    },
-		 
-		    "myFlexible": {
-		 
-		        "prefix": "myFlexible",
-		 
-		        "body": [
-		 
-		            "Flexible(",
-		 
-		              "flex: 1,",
-		 
-		              "child: Container(",
-		 
-		              "color:Colors.white",
-		 
-		            "))",
-		 
-		        ],
-		 
-		        "description": "myFlexible"
-		 
-		    },
-		 
-		    "myrequestdd": {
-		 
-		        "prefix": "myrequestdd",
-		 
-		        "body": [
-		 
-		            "void requestdd(Map param){",
-		 
-		                "NetDataUtil().postGetuseramountinfo(param).then((value) {",
-		 
-		            
-		 
-		                  "print(\"=========moneydata=====$value\");",
-		 
-		                  "setState(() {",
-		 
-		                   "moneyData = value;",
-		 
-		            
-		 
-		                "});",
-		 
-		                  
-		 
-		                "}).catchError((onError) {",
-		 
-		                "print(\"页面请求失败 $onError\");",
-		 
-		                "}).whenComplete(() {",
-		 
-		                "print(\"页面whenComplete\");",
-		 
-		                "});",
-		 
-		              "}",
-		 
-		        ],
-		 
-		        "description": "myrequestdd"
-		 
-		    },
-		 
-		    
-		 
-		    "mySmartRefresher": {
-		 
-		        "prefix": "mySmartRefresher",
-		 
-		        "body": [
-		 
-		            "SmartRefresher(",
-		 
-		                "enablePullDown: true,",
-		 
-		                "enablePullUp: true,",
-		 
-		                "header: WaterDropHeader(),",
-		 
-		                "footer: CustomFooter(",
-		 
-		                "builder: (BuildContext context, LoadStatus mode) {",
-		 
-		                    "Widget body;",
-		 
-		                    "if (mode == LoadStatus.idle) {",
-		 
-		                    "body = Text(gLoadStatusIdle);",
-		 
-		                    "} else if (mode == LoadStatus.loading) {",
-		 
-		                    "body = Text(gLoadStatusLoading); //CupertinoActivityIndicator();",
-		 
-		                    "} else if (mode == LoadStatus.failed) {",
-		 
-		                    "body = Text(gLoadStatusFailed);",
-		 
-		                    "} else if (mode == LoadStatus.canLoading) {",
-		 
-		                    "body = Text(gLoadStatusCanLoading);",
-		 
-		                    "} else {",
-		 
-		                    "body = Text(gNomoreData);",
-		 
-		                    "}",
-		 
-		                    "return Container(",
-		 
-		                    "height: 55.0,",
-		 
-		                    "child: Center(child: body),",
-		 
-		                    ");",
-		 
-		                "},",
-		 
-		                "),",
-		 
-		                "controller: _refreshController,",
-		 
-		                "onRefresh: _onRefresh,",
-		 
-		                "onLoading: _onLoading,",
-		 
-		                "child:ListView.separated(",
-		 
-		                "physics: AlwaysScrollableScrollPhysics(),",
-		 
-		                "controller: _scrollController,",
-		 
-		                "separatorBuilder: (BuildContext context, int index){",
-		 
-		                    "return Divider(color: Util_Tool.themLineGrayColor,);",
-		 
-		                "},",
-		 
-		                "itemBuilder: _buildListItem,",
-		 
-		                "itemCount: glistData.length,",
-		 
-		              ")",
-		 
-		            ")",
-		 
-		        ],
-		 
-		        "description": "mySmartRefresher"
-		 
-		    },
-		 
-		    "myListView.separated": {
-		 
-		        "prefix": "ListView.separated",
-		 
-		        "body": [
-		 
-		            "ListView.separated(",
-		 
-		              "physics: AlwaysScrollableScrollPhysics(),",
-		 
-		              "controller: _scrollController,",
-		 
-		              "separatorBuilder: (BuildContext context, int index){",
-		 
-		                 "return Divider(color: Util_Tool.themLineGrayColor,);",
-		 
-		              "},",
-		 
-		              "itemBuilder: (BuildContext context, int index){",
-		 
-		                  "return Text('text');",
-		 
-		              "},",
-		 
-		              "itemCount: glistData.length,",
-		 
-		          ")",
-		 
-		        ],
-		 
-		        "description": "ListView.separated"
-		 
-		    },
-		 
-		    "myText.rich": {
-		     "prefix": "myText.rich",
-		     "body": [
-		        "Text.rich(",
-					"text: '$index',",
-            		"style: TextStyle(fontSize: 10, decoration: TextDecoration.none),",
-					"style: TextStyle(",
-		            "color: Colors.white70,",
-		            "fontSize: 14,",
-					"decoration: TextDecoration.none",
-		            "fontWeight: FontWeight.w500,",
-		            "),",
-		            "TextSpan(",
-		                "children: [",
-		                        "WidgetSpan(",
-		                        "child: SizedBox(width: 14),",
-		                        "),",
-		                        "TextSpan(text: description),",
-		                        "WidgetSpan(",
-		                        "alignment: PlaceholderAlignment.middle,",
-		                        "child: Icon(",
-		                            "Icons.arrow_forward_ios,",
-		                            "color: Colors.white70,",
-		                            "size: 14,",
-		                        "),",
-		                        "),",
-		                    "]),",
-		        "),",
-		     ],
-		 
-		     "description": "myText.rich"
-		 
-		    },
-		 
-		    "myRichTextWidgetSpan": {
-		 
-		     "prefix": "myRichTextWidgetSpan",
-		 
-		     "body": [
-		 
-		        "RichText(",
-		        "text: TextSpan(",
-		          "text: '登陆即同意',",
-		          "style: TextStyle(fontSize: 14, color: Colors.black,decoration: TextDecoration.none),",
-				  "recognizer: TapGestureRecognizer()..onTap = () {},",
-		          "children: [",
-		            "TextSpan(",
-		              "text: '\"服务条款\"',",
-		              "style: TextStyle(fontSize: 14, color: Colors.blue,decoration: TextDecoration.none),",
-		              "recognizer: TapGestureRecognizer()",
-		                "..onTap = () {",
-		                  "print('点击了服务条款');",
-		                "},",
-		            "),",
-		            "TextSpan(",
-		              "text: '和',",
-		              "style: TextStyle(fontSize: 14, color: Colors.black,decoration: TextDecoration.none,decoration: TextDecoration.none),",
-		            "),",
-		            "TextSpan(",
-		              "text: '\"隐私政策\"',",
-		              "style: TextStyle(fontSize: 14, color: Colors.blue,decoration: TextDecoration.none),",
-		              "recognizer: TapGestureRecognizer()",
-		                "..onTap = () {",
-		                  "print('点击了隐私政策');",
-		                "},",
-		            "),",
-		            "WidgetSpan(",
-		              "alignment: PlaceholderAlignment.middle,",
-		              "child: Image.asset(",
-		                "'assets/noavatar.png',",
-		                "width: 20,",
-		                "height: 20,",
-		              "),",
-		            "),",
-		          "],",
-		        "),",
-		      "),",
-		 
-		     ],
-		 
-		     "description": "myRichTextWidgetSpan"
-		 
-		    },
-		 
-		    "mySwiperView": {
-		 
-		     "prefix": "mySwiperView",
-		 
-		     "body": [
-		        
-		        "Widget SwiperView() {",
-		            "return Container(",
-		              "padding: const EdgeInsets.fromLTRB(0, 50, 0, 5),",
-		              "width: MediaQuery.of(context).size.width,",
-		              "height: 300,",
-		              "child: Swiper(",
-		                "itemCount: imageList.length,",
-		                "itemBuilder: _swiperBuilder,",
-		                "pagination: SwiperPagination(",
-		                    "alignment: Alignment.bottomRight,",
-		                    "margin: const EdgeInsets.fromLTRB(0, 0, 20, 10),",
-		                    "builder: DotSwiperPaginationBuilder(",
-		                    "color: Colors.black54, activeColor: Colors.white)),",
-		                "controller: SwiperController(),",
-		                "scrollDirection: Axis.horizontal,",
-		                "autoplay: true,",
-		                "onTap: (index) => print('点击了第$index'),",
-		              "),",
-		            ");",
-		          "}",
-		        
-		          "Widget _swiperBuilder(BuildContext context, int index) {",
-		            "return (imageList[index]);",
-		 
-		     ],
-		 
-		     "description": "mySwiperView"
-		 
-		    },
-		 
-		    "mySliverAppBar": {
-		 
-		      "prefix": "mySliverAppBar",
-		 
-		      "body": [
-		 
-				"SliverAppBar(",
-					"title: Text('NINGHAO'),",
-					"pinned: true,",
-					"floating: true,",
-					"expandedHeight: 178.0,",
-					"flexibleSpace: FlexibleSpaceBar(",
-					"title: Text(",
-						"'Ninghao Flutter'.toUpperCase(),",
-						"style: TextStyle(",
-						"fontSize: 15.0,",
-						"letterSpacing: 3.0,",
-						"decoration: TextDecoration.none",
-						"fontWeight: FontWeight.w400,",
-						"),",
-					"),",
-					"background: Image.network(",
-						"'https://resources.ninghao.net/images/overkill.png',",
-						"fit: BoxFit.cover,",
-					"),",
-					"),",
-				"),",
-		 
-		      ],
-		 
-		      "description": "SliverAppBar"
-		 
-		     },
-	     "myCustomScrollView": {
-	 
-	      "prefix": "myCustomScrollView",
-	 
-	      "body": [
-		 
-			"myCustomScrollView(",
-					"slivers: <Widget>[",
-					"SliverAppBar(",
-						"pinned: true,",
-						"stretch: true,",
-						"expandedHeight: 200.0,",
-						"flexibleSpace: FlexibleSpaceBar(",
-						"title: Text('开学季'),",
-						"background: Image.network(",
-							"\"https://goss.cfp.cn/creative/vcg/800/new/VCG211165042753.jpg\",",
-							"fit: BoxFit.cover,",
-						"),",
-						"),",
-					"),",
-					"SliverPadding(padding: EdgeInsets.only(top: 10),),",
-					"SliverGrid(",
-						"//调整间距",
-						"gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(",
-						"crossAxisSpacing: 10,",
-						"maxCrossAxisExtent: 200,",
-						"mainAxisSpacing: 10,",
-						"childAspectRatio: 4.0",
-						"),",
-						//加载内容",
-						"delegate: SliverChildBuilderDelegate(",
-							"(context,index) {",
-							"return Container( //设置每个item的内容",
-								"alignment: Alignment.center,",
-								"color: Colors.orangeAccent,",
-								"child: Text(\"$index\"),",
-							");",
-							"},",
-						"childCount: 20, //设置个数",
-						"),",
-					"),",
-					"SliverPadding(padding: EdgeInsets.only(top: 10),),",
-					"SliverFixedExtentList(",
-						"itemExtent: 50,",
-						"//加载内容",
-						"delegate: SliverChildBuilderDelegate(",
-							"(context, index) {",
-							"return Container(",
-								"alignment: Alignment.center,",
-								"color: Colors.deepPurpleAccent,",
-								"child: Text('$index'),",
-							");",
-							"},",
-						"//设置显示个数",
-						"childCount: 20,",
-						"),",
-					")",
-					"],",
-			");",
-		 
-	      ],
-	 
-	      "description": "CustomScrollView"
-	 
-	     },
-		  "mySliverPadding": {
-		 
-		   "prefix": "mySliverPadding",
-		 
-		   "body": [
-		 
-			       "SliverPadding(padding: EdgeInsets.only(top: 10),),",
-		 
-		   ],
-		 
-		    "description": "mySliverPadding"
-		 
-		   },
-		    "mySliverGrid": {
-		 
-		     "prefix": "mySliverGrid",
-		 
-		     "body": [
-		 
-			    "SliverGrid(",
-					"//调整间距",
-					"gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(",
-					"crossAxisSpacing: 10,",
-					"maxCrossAxisExtent: 200,",
-					"mainAxisSpacing: 10,",
-					"childAspectRatio: 4.0",
-					"),",
-					//加载内容",
-					"delegate: SliverChildBuilderDelegate(",
-						"(context,index) {",
-						"return Container( //设置每个item的内容",
-							"alignment: Alignment.center,",
-							"color: Colors.orangeAccent,",
-							"child: Text(\"$index\"),",
-						");",
-						"},",
-					"childCount: 20, //设置个数",
-					"),",
-				"),",
-		 
-		     ],
-		 
-		     "description": "mySliverGrid"
-		 
-		    },
-		   "mySliverFixedExtentList": {
-		 
-		    "prefix": "mySliverFixedExtentList",
-		 
-		    "body": [
-		 
-				"SliverFixedExtentList(",
-					"itemExtent: 50,",
-					"//加载内容",
-					"delegate: SliverChildBuilderDelegate(",
-						"(context, index) {",
-						"return Container(",
-							"alignment: Alignment.center,",
-							"color: Colors.deepPurpleAccent,",
-							"child: Text('$index'),",
-						");",
-						"},",
-					"//设置显示个数",
-					"childCount: 20,",
-					"),",
-				")",
-		 
-		    ],
-		 
-		    "description": "mySliverFixedExtentList"
-		 
-		   },
-		 "mySliverList": {
-		
-	   	  "prefix": "mySliverList",
-	 
-	   	  "body": [
-	 
-		   	 "SliverList(",
-				"delegate: SliverChildBuilderDelegate((context, index) => ListTile(",
-				"title: Text('标题$index'),",
-				"),",
-				"childCount: 10),",
+	"mySliverChildBuilder": {
+	"prefix": "mySliverChildBuilder",
+	"body": [
+		"SliverChildBuilderDelegate(",
+		"(context,index) {",
+		"return Container( //设置每个item的内容",
+		"alignment: Alignment.center,",
+		"color: Colors.orangeAccent,",
+		"child: Text(\"$index\"),",
+		");",
+		"},",
+		"childCount: 20, //设置个数",
+		"),",
+	],
+	"description": "mySliverChildBuilder"
+	},
+
+	"mySliverChildListDelegate": {
+	"prefix": "mySliverChildListDelegate",
+	"body": [
+		"SliverChildListDelegate(",
+			"_gridLists.map((item){",
+				"return Container();",
+			"}).toList()",
+		"),",
+	],
+	"description": "mySliverChildListDelegate"
+	},
+
+	"mySliverGrid": {
+	"prefix": "mySliverGrid",
+	"body": [
+		"SliverGrid(",
+		"//调整间距",
+		"gridDelegate: ",
+		//加载内容",
+		"delegate: ",
+		"),",
+	],
+	"description": "mySliverGrid"
+	},
+
+	"mySliverGrid_max_childbuilder": {
+	"prefix": "mySliverGrid_max_childbuilder",
+	"body": [
+	"SliverGrid(",
+	"//调整间距",
+	"gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(",
+	"crossAxisSpacing: 10,",
+	"maxCrossAxisExtent: 200,",
+	"mainAxisSpacing: 10,",
+	"childAspectRatio: 4.0",
+	"),",
+	"delegate: SliverChildBuilderDelegate(",
+	"(context,index) {",
+	"return Container( //设置每个item的内容",
+	"alignment: Alignment.center,",
+	"color: Colors.orangeAccent,",
+	"child: Text(\"$index\"),",
+	");",
+	"},",
+	"childCount: 20, //设置个数",
+	"),",
+	"),",
+	],
+	"description": "mySliverGrid_max_childbuilder"
+	},
+
+	"mySliverGrid_max_childListDelegate": {
+	"prefix": "mySliverGrid_max_childListDelegate",
+	"body": [
+	"SliverGrid(",
+	"//调整间距",
+	"gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(",
+	"crossAxisSpacing: 10,",
+	"maxCrossAxisExtent: 200,",
+	"mainAxisSpacing: 10,",
+	"childAspectRatio: 4.0",
+	"),",
+	//加载内容",
+	"delegate: SliverChildListDelegate([])",
+	"),",
+	],
+	"description": "mySliverGrid_max_childListDelegate"
+	},
+
+	"mySliverList": {
+	"prefix": "mySliverList",
+	"body": [
+	"SliverList(",
+	"delegate: ",
+	"),",
+	],
+	"description": "mySliverList"
+	},
+
+	"mySliverList_ChildBuilderD": {
+	"prefix": "mySliverList_ChildBuilderD",
+	"body": [
+	"SliverList(",
+	"delegate: SliverChildBuilderDelegate((context, index) => ListTile(",
+	"title: Text('标题$index'),",
+	"),",
+	"childCount: 10),",
+	"),",
+	],
+	"description": "mySliverList_ChildBuilderD"
+	},
+	
+	"mySliverList_ChildList": {
+	"prefix": "mySliverList_ChildList",
+	"body": [
+	"SliverList(",
+		"delegate: SliverChildListDelegate(",
+		"_gridLists.map((item){",
+		"return new Container(",
+			"alignment: Alignment.center,",
+			"color: Colors.white,",
+			"child: new Text(''),",
+		");",
+		"}).toList()",
+	"),",
+	],
+	"description": "mySliverList_ChildList"
+	},
+
+	"myFlatButton": {
+	"prefix": "myFlatButton",
+	"body": [
+	"FlatButton(",
+	"onPressed: _log,",
+	"child: Text(\"扁平按钮\"),",
+	"color: Colors.blue,",
+	"textColor: Colors.black,",
+	"shape: RoundedRectangleBorder(",
+	"side: BorderSide(",
+	"color: Colors.white,",
+	"width: 1,",
+	"),",
+	"borderRadius: BorderRadius.circular(8)),",
+	");",
+	"}",
+	],
+	"description": "myFlatButton"
+	},
+	"myOutlineButton": {
+	"prefix": "myOutlineButton",
+	"body": [
+	"OutlineButton(",
+	"onPressed: _log,",
+	"child: Text(\"边线按钮\"),",
+	"textColor: Colors.red,",
+	"splashColor: Colors.green,",
+	"highlightColor: Colors.black,",
+	"shape: BeveledRectangleBorder(",
+	"side: BorderSide(",
+	"color: Colors.red,",
+	"width: 1,",
+	"),",
+	"borderRadius: BorderRadius.circular(10),",
+	"),",
+	")",
+	],
+	"description": "myOutlineButton"
+	},
+	"myIconButton": {
+	"prefix": "myIconButton",
+	"body": [
+	"IconButton(",
+	"icon: Icon(Icons.home),",
+	"onPressed: _log,",
+	"color: Colors.blueAccent,",
+	"highlightColor: Colors.red,",
+	");",
+	],
+	"description": "myIconButton"
+	},
+	"RaisedButton": {
+	"prefix": "myRaisedButton",
+	"body": [
+	"RaisedButton(",
+	"child: Text('Text',",
+	"style: TextStyle(fontSize:14,color:Colors.black), maxLines: 1,),",
+	"shape: StadiumBorder(),",
+	"color: ,",
+	"onPressed: (){",
+	"},",
+	")",
+	],
+	"description": "myRaisedButton"
+	},
+	"mybtnTwoHButtonTheme": {
+	"prefix": "mybtnTwoHButtonTheme",
+	"body": [
+	"Widget bottomMenusWidget(",
+	"{",
+	"@required String backText,",
+	"@required String confirmText,",
+	"double minWidth = 45, ",
+	"double btnHegiht = 45,",
+	"Function() backAction, ",
+	"TextStyle tsBack, ",
+	"Color backBtnGround, ",
+	"Function confirmAction, ",
+	"TextStyle tsConfrim,",
+	"Color confrimBtnground}) {",
+	"TextStyle defaultTextStyle = TextStyle(color: Colors.white, fontSize: 14);",
+	"return Container(",
+	"color: Colors.transparent,",
+	"child: Row(",
+	"mainAxisAlignment: MainAxisAlignment.spaceBetween,",
+	"crossAxisAlignment: CrossAxisAlignment.center,",
+	"children: <Widget>[",
+	"Expanded(flex: 1, child: ButtonTheme(",
+	"minWidth: minWidth,",
+	"height: btnHegiht,",
+	"child: RaisedButton(",
+	"child: Text(backText,",
+	"style: tsBack ?? defaultTextStyle, maxLines: 1,),",
+	"shape: StadiumBorder(),",
+	"color: backBtnGround ?? btnCancelBackGround,",
+	"onPressed: (){",
+	"backAction();",
+	"},",
+	"),",
+	")),",
+	"SizedBox(width: 15,),",
+	"Expanded(flex: 1, child: ButtonTheme(",
+	"minWidth: minWidth,",
+	"height: btnHegiht,",
+	"child: RaisedButton(",
+	"child: Text(confirmText,",
+	"style: tsConfrim ?? defaultTextStyle, maxLines: 1),",
+	"shape: StadiumBorder(),",
+	"color: confrimBtnground ?? Colors.white,",
+	"onPressed: confirmAction,",
+	"),",
+	")),",
+	"]),",
+	");",
+	"}",
+	],
+	"description": "mybtnTwoHButtonTheme"
+	},
+	"myButtonTheme Widget": {
+	"prefix": "myButtonTheme Widget",
+	"body": [
+	"ButtonTheme(",
+	"minWidth: minWidth,",
+	"height: btnHegiht,",
+	"child: RaisedButton(",
+	"child: Text(backText,",
+	"style: tsBack ?? defaultTextStyle, maxLines: 1,),",
+	"shape: StadiumBorder(),",
+	"color: backBtnGround ?? btnCancelBackGround,",
+	"onPressed: (){",
+	"backAction();",
+	"},",
+	"),",
+	")",
+	],
+	"description": "myButtonTheme Widget"
+	},
+	"mDeviderVwidget": {
+	"prefix": "mDeviderVwidget",
+	"body": [
+	",Widget vDevider({Color color, double width = 1,double thickness = 1, double indent = 0, double endIndent = 0}){",
+	",return VerticalDivider(",
+	",color: color ?? Color.fromARGB(255, 213, 213, 213),",
+	",width: width,",
+	",thickness: thickness,",
+	",indent: indent,",
+	",endIndent: endIndent,",
+	",);",
+	",}",
+	],
+	"description": "mDeviderVwidget"
+	},
+	"myif": {
+	"prefix": "myif",
+	"body": [
+	"if(){",
+	"}",
+	],
+	"description": "myif"
+	},
+	 
+	"myifelseif": {
+	"prefix": "myifelseif",
+	"body": [
+	"if(){",
+	"} else if(){",
+	"}",
+	],
+	"description": "myifelseif"
+	},
+	"myWillPopScope(false)": {
+	"prefix": "myWillPopScope(false)",
+	"body": [
+	"WillPopScope(child: null, onWillPop: () async{",
+	"return Future.value(false);",
+	"})",
+	],
+	"description": "myWillPopScope(false)"
+	},
+	"myFutureDdynamic": {
+	"prefix": "myFutureDdynamic",
+	"body": [
+	"Future<dynamic>.delayed(Duration(seconds: 2)).then((dynamic onValue) {",
+	"})",
+	],
+	"description": "myFutureDdynamic"
+	},
+	"mytextflexiblecn": {
+	"prefix": "mytextflexiblecn",
+	"body": [
+	"Row(",
+	"mainAxisAlignment: MainAxisAlignment.center,",
+	"crossAxisAlignment: CrossAxisAlignment.end,",
+	"children: <Widget>[",
+	"Flexible(",
+	"child: RichText(",
+	"text: TextSpan(",
+	"text: MPUtil.fixAutoLines(",
+	"''),",
+	"style:",
+	"TextStyle(color: Colors.black, fontSize: 16, height: 1.2),",
+	"children: [",
+	"TextSpan(",
+	"text: MPUtil.fixAutoLines(''),",
+	"style: TextStyle(",
+	"fontSize: 16,",
+	"color: Theme.of(context).accentColor,",
+	"decoration: TextDecoration.underline,",
+	"decorationColor: Theme.of(context).accentColor),",
+	"recognizer: TapGestureRecognizer()",
+	"..onTap = () {",
+	"showImportBottomSheet(context);",
+	"},",
+	"),",
+	"TextSpan(",
+	"text: MPUtil.fixAutoLines('',",
+	"style: TextStyle(",
+	"color: Colors.black,",
+	"fontSize: 16,",
+	"textBaseline: TextBaseline.alphabetic)),",
+	"])),",
+	"),",
+	"Text(",
+	"MPUtil.fixAutoLines(",
+	" '',",
+	"style: TextStyle(",
+	"color: Colors.black,",
+	"fontSize: 16,",
+	"height: 0.3,",
+	"))",
+	"],",
+	");",
+	],
+	"description": "mytextflexible cn"
+	},
+	"myScrollViewSingleExpandKey": {
+	"prefix": "myScrollViewSingleExpandKey",
+	"body": [
+		"ScrollController _scrollController = ScrollController();",
+		"_scrollController.addListener(() {",
+			"print('_scrollController ${_scrollController.offset}');",
+		  "});",
+		"Expanded(",
+		"child: new SingleChildScrollView(",
+		  "child: new Container(",
+			"height: double.maxFinite,",
+			"key:_scrollController,",
+			"color:Colors.black12,",
+			"child: new Column(",
+			  "children: buildChild(),",
 			"),",
-	 
-	   	  ],
-	 
-	   	  "description": "mySliverList"
-	 
-	   	 },
-	 "myFlatButton": {
-		 
-	      "prefix": "myFlatButton",
-	 
-	      "body": [
-	 
-		        "FlatButton(",
-					"onPressed: () {},",
-					"child: Text(\"扁平按钮\"),",
-					"color: Colors.blue,",
-					"textColor: Colors.black,",
-					"shape: RoundedRectangleBorder(",
-						"side: BorderSide(",
-						"color: Colors.white,",
-						"width: 1,",
-						"),",
-						"borderRadius: BorderRadius.circular(8)),",
-				");",
-	      ],
-	 
-	      "description": "myFlatButton"
-	 
-	     },
-		 "myOutlineButton": {
-		 
-		     "prefix": "myOutlineButton",
-
-		     "body": [
-
-			"OutlineButton(",
-				"onPressed: _log,",
-				"child: Text(\"边线按钮\"),",
-				"textColor: Colors.red,",
-				"splashColor: Colors.green,",
-				"highlightColor: Colors.black,",
-				"shape: BeveledRectangleBorder(",
-				"side: BorderSide(",
-					"color: Colors.red,",
-					"width: 1,",
-				"),",
-				"borderRadius: BorderRadius.circular(10),",
-				"),",
-			")",
-
-		     ],
-
-		     "description": "myOutlineButton"
-
-		    },
-		 "myIconButton": {
-		 
-		     "prefix": "myIconButton",
-		 
-		     "body": [
-		 
-				"IconButton(",
-					"icon: Icon(Icons.home),",
-					"onPressed: _log,",
-					"color: Colors.blueAccent,",
-					"highlightColor: Colors.red,",
-				");",
-		 
-		     ],
-		 
-		     "description": "myIconButton"
-		 
-		    },
-
-	"myGestureDetector": {
-	    "prefix": "myGestureDetector",
-	    "body": [
-		    "GestureDetector(",
-				"child: SvgPicture.asset(",
-				"isLike",
-					"? 'images/.svg'",
-					": 'images/.svg',",
-				"),",
-				"onTap: () {},",
-				"behavior: HitTestBehavior.opaque,",
-			"),",
-	    ],
-	    "description": "myGestureDetector"
-	   },
-
-		 "mySvgPicture": {
-	      "prefix": "mySvgPicture",
-	      "body": [
-		     "SvgPicture.asset(",
-				"isLike",
-					"? 'images/.svg'",
-					": 'images/.svg',",
-			"),",
-	      ],
-	      "description": "mySvgPicture"
-	     },
-
-	"myTextButton": {
-	  "prefix": "myTextButton",
-	  "body": [
-		"TextButton(",
-			"child: Text('TextButton按钮'),",
-			" //添加一个点击事件",
-			"onPressed: () {},",
-			"//定义一下文本样式",
-			"style: ButtonStyle(",
-			"//定义文本的样式 这里设置的颜色是不起作用的",
-			" textStyle: MaterialStateProperty.all(",
-			"TextStyle(fontSize: 18, decoration: TextDecoration.none)),//color: Colors.red",
-			"//设置按钮上字体与图标的颜色",
-			"//foregroundColor: MaterialStateProperty.all(Colors.deepPurple),",
-			"//更优美的方式来设置",
-			"foregroundColor: MaterialStateProperty.resolveWith((",
-			"states) {",
-			"if (states.contains(MaterialState.focused) &&",
-			"!states.contains(MaterialState.pressed)) {",
-			"//获取焦点时的颜色",
-			"return Colors.blue;",
-			"} else if (states.contains(MaterialState.pressed)) {",
-			"//按下时的颜色",
-			"return Colors.deepPurple;",
-			"}",
-			"//默认状态使用灰色",
-			"return AppColors.textBtn;",
-			"}),",
-			"//设置水波纹颜色",
-			"overlayColor: MaterialStateProperty.all(Colors.yellow),",
-			"//设置阴影  不适用于这里的TextButton",
-			"elevation: MaterialStateProperty.all(0),",
-			"tapTargetSize: MaterialTapTargetSize.shrinkWrap,",
-			"//设置按钮内边距",
-			"padding: MaterialStateProperty.all(EdgeInsets.all(10)),",
-			"//设置按钮的大小",
-			"minimumSize: MaterialStateProperty.all(Size(200, 100)),",
-			"//设置边框",
-			"side:",
-			"MaterialStateProperty.all(BorderSide(color: Colors.grey, width: 1)),",
-			"//外边框装饰 会覆盖 side 配置的样式",
-			"shape: MaterialStateProperty.all(StadiumBorder()),",
-			"shape: RoundedRectangleBorder(",
-				"side: BorderSide(",
-				"width: 0.5,",
-				"color: AppColors.border_dark,",
-				"),",
-				"borderRadius: BorderRadius.circular(2),",
-			"),",
-			"//背景颜色",
-			" backgroundColor: MaterialStateProperty.resolveWith((states) {",
-			"//设置按下时的背景颜色",
-			"if (states.contains(MaterialState.pressed)) {",
-			" return Colors.blue[200];",
-			"}",
-			"//默认不使用背景颜色",
-			"return AppColors.bgBtn;",
-			"}),",
-			"),",
-		")",
-	  ],
-	  "description": "myTextButton"
-	 },
-
-		 "myDivider": {
-		  "prefix": "myDivider",
-		  "body": [
-			      "Divider(height: 10,thickness: 0.1,),",
-            
-		  ],
-		  "description": "myDivider"
-		 },
-
-		 "myDividerVertical": {
-			  "prefix": "myDividerVertical",
-			  "body": [
-				      "VerticalDivider(width: 1,thickness: 0.1,),",
-				
-			  ],
-			  "description": "myDividerVertical"
-			 },
-
-			"myOutlinedButton": {
-			  "prefix": "myOutlinedButton",
-			  "body": [
-				     "OutlinedButton(",
-                      "onPressed: () {",
-                        "getLineData();",
-                        "setState(() {",
-                          "selKLineType = e;",
-                        "});",
-                      "},",
-                      "child: Text(enumToString(e)),",
-                      "style: ButtonStyle(",
-                          "tapTargetSize: MaterialTapTargetSize.shrinkWrap,",
-                          "minimumSize: MaterialStateProperty.all(Size(0, 0)),",
-                          "padding: MaterialStateProperty.all(",
-                              "EdgeInsets.fromLTRB(10, 3, 10, 3)),",
-                          "textStyle: MaterialStateProperty.all(TextStyle(","decoration: TextDecoration.none",
-                              "// color: e == selKLineType",
-                              "//     ? Colors.white",
-                              "//     : Color(0xFF6194C7),",
-                              "fontSize: 12)),",
-                          "backgroundColor: e == selKLineType",
-                              "? MaterialStateProperty.all(AppColors.bg_btn_sel)",
-                              ": MaterialStateProperty.all(",
-                                  "AppColors.bg_btn_unSel),",
-                          "foregroundColor: MaterialStateProperty.all(",
-                              "e == selKLineType",
-                                  "? Colors.white",
-                                  ": AppColors.text_main),",
-                          "//side: MaterialStateProperty.all(",
-                              "//BorderSide(color: Colors.blue, width: 4)),",
-						  "shape: MaterialStateProperty.all(StadiumBorder()),",
-                          "shape: MaterialStateProperty.all(",
-                            "RoundedRectangleBorder(",
-                              "side: BorderSide(",
-                                "width: 0.5,",
-                                "color: Color(0xFFB4B4B4),",
-                              "),",
-                              "borderRadius: BorderRadius.circular(20),",
-                            "),",
-                          ")),",
-                    "))",
-			  ],
-			  "description": "myOutlinedButton"
-			 },
-
-	"myButtonBar": {
-    "prefix": "myButtonBar",
-    "body": [
-	     "ButtonBar(",
-			"alignment: MainAxisAlignment.start,",
-			"mainAxisSize: MainAxisSize.max,",
-			"children: <Widget>[",
-			"RaisedButton(",
-				"child: Text(tr('买入')),",
-				"onPressed: () => {},",
-			"),",
-			"RaisedButton(",
-				"child: Text(tr('卖出')),",
-				"onPressed: () => {},",
-			"),",
-			"],",
-		")",
-    ],
-    "description": "myButtonBar"
-   },
-
-"mRaisedButton": {
-	    "prefix": "mRaisedButton",
-	    "body": [
-		     "RaisedButton(",
-				"onPressed: () {},",
-				"disabledColor: AppColors.bg_btn_sel.darker(50),",
-				"disabledTextColor: Colors.white70,",
-				"child: Text(tr('3.2.3_Hy_UnBind'),",
-				"style: TextStyle(fontSize: 16,decoration: TextDecoration.none)),",
-				"splashColor: Colors.green,",
-				"highlightColor: Colors.black,",
-				"shape: BeveledRectangleBorder(",
-				"borderRadius: BorderRadius.circular(2),",
-				"),",
-			"))",
-	    ],
-	    "description": "mRaisedButton"
-	   },
+		  "),",
+		"))",
+	],
+	"description": "myScrollViewSingleExpandKey"
+	},
 
 
-	"myButtonStyle": {
-		    "prefix": "myButtonStyle",
-		    "body": [
-			"ButtonStyle(",
-				"tapTargetSize: MaterialTapTargetSize.shrinkWrap,",
-				"minimumSize: MaterialStateProperty.all(Size(0, 0)),",
-				"padding: MaterialStateProperty.all(",
-					"EdgeInsets.fromLTRB(10, 3, 10, 3)),",
-				"textStyle: MaterialStateProperty.all(TextStyle(",
-				"decoration: TextDecoration.none",
-					"// color: e == selKLineType",
-					"//     ? Colors.white",
-					"//     : Color(0xFF6194C7),",
-					"fontSize: 12)),",
-				"backgroundColor: e == selKLineType",
-					"? MaterialStateProperty.all(AppColors.bg_btn_sel)",
-					": MaterialStateProperty.all(",
-						"AppColors.bg_btn_unSel),",
-				"foregroundColor: MaterialStateProperty.all(",
-					"e == selKLineType",
-						"? Colors.white",
-						": AppColors.text_main),",
-				"// side: MaterialStateProperty.all(",
-				"//     BorderSide(color: Colors.blue, width: 4)),",
-				"shape: MaterialStateProperty.all(StadiumBorder()),",
-				"shape: MaterialStateProperty.all(",
-				"RoundedRectangleBorder(",
-					"side: BorderSide(",
-					"width: 0.5,",
-					"color: AppColors.border_dark,",
-					"),",
-					"borderRadius: BorderRadius.circular(2),",
-				"),",
-			"))",
-		    ],
-		    "description": "myButtonStyle"
-		   },
-	"myshapeMaterialStateProperty": {
-		    "prefix": "myshapeMaterialStateProperty",
-		    "body": [
-			"shape: MaterialStateProperty.all(StadiumBorder()),",
-			"shape: RoundedRectangleBorder(",
-				"side: BorderSide(",
-				"width: 0.5,",
-				"color: AppColors.border_dark,",
-				"),",
-				"borderRadius: BorderRadius.circular(2),",
-			"),",
-		    ],
-		    "description": "myshapeMaterialStateProperty"
-		   },
 	// "Print to console": {
-	// 	    "prefix": "log",
-	// 	    "body": [
-	// 	        "$2"
-	// 	    ],
-	// 	    "description": "Log output to console"
-	// 	   },
+	// "prefix": "log",
+	// "body": [
+	// "console.log('$1');",
+	// "$2"
+	// ],
+	// "description": "Log output to console"
+	// },
 
-}
+
+
+	// "Print to console": {
+	// "prefix": "log",
+	// "body": [
+	// "console.log('$1');",
+	// "$2"
+	// ],
+	// "description": "Log output to console"
+	// },
+
+
+
+
+	// "Print to console": {
+	// "prefix": "log",
+	// "body": [
+	// "console.log('$1');",
+	// "$2"
+	// ],
+	// "description": "Log output to console"
+	// },
+
+
+
+	// "Print to console": {
+	// "prefix": "log",
+	// "body": [
+	// "console.log('$1');",
+	// "$2"
+	// ],
+	// "description": "Log output to console"
+	// },
+
+
+
+	// "Print to console": {
+	// "prefix": "log",
+	// "body": [
+	// "console.log('$1');",
+	// "$2"
+	// ],
+	// "description": "Log output to console"
+	// },
+
+
+	
+	// "Print to console": {
+	// "prefix": "log",
+	// "body": [
+	// "console.log('$1');",
+	// "$2"
+	// ],
+	// "description": "Log output to console"
+	// },
+	}
